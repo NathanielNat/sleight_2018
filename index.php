@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Slight | Your No1 Artisan Plartform </title>
+    <title>Sleight | Your No1 Artisan Plartform </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
- <a href="index.html"><img src="img/accracityhotellogo.png" class="img-fluid navbar-brand" width="124" height="68"></a>
+ <a href="index.html"><img src="img/sleight.png" class="img-fluid navbar-brand" width="124" height="68"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
