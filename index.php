@@ -52,11 +52,14 @@
 
 <!-- home top image -->
 <section class="sleight-back">
-  <div class="text-center homt">
-			<h1 class="display-2">LUXURY DEFINED</h1>
-			<h1>AT</h1>
-			<h1>ACCRA CITY HOTEL</h1>
-			</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="display-3"> Your No 1 Artisan <br>Plartfrom</h1>
+        <p >Hire local professionals , hand-picked home services Providers <br> for pretty much anything.</p>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- home top image -->
 
