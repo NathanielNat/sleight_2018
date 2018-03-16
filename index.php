@@ -22,9 +22,9 @@
   </head>
   <body>
 
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light sleight-headbg">
     <div class="container">
- <a href="index.html"><img src="img/sleight.png" class="img-fluid navbar-brand" width="124" height="68"></a>
+ <a href="index.html"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

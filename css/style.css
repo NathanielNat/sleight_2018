@@ -8,3 +8,8 @@ body {
     text-align: left;
     background-color: #fff;
 }
+
+
+.sleight-headbg {
+    background: linear-gradient( to right bottom, #1bbcb2,#37b9e9 );
+}
