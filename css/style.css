@@ -14,6 +14,10 @@ body {
     background: linear-gradient( to right bottom, #1bbcb2,#37b9e9 );
 }
 
+.slcl {
+  color: #37b9e9;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
     transition: all 0.5s;
@@ -50,7 +54,7 @@ li.nav-item {
 }
 
 .sleight-back {
-    min-height: 100vh;
+    min-height: 85vh;
     background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/tools.jpg);
     background-repeat: no-repeat;
     background-size: cover;

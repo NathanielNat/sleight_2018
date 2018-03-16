@@ -55,8 +55,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="display-3"> Your No 1 Artisan <br>Plartfrom</h1>
-        <p >Hire local professionals , hand-picked home services Providers <br> for pretty much anything.</p>
+        <h1 class="display-3"> Your No 1 <span class="slcl">Artisan </span> <br>Plartfrom</h1>
+        <p class="lead" >Hire local professionals , hand-picked home services Providers <br> for pretty much anything.</p>
       </div>
     </div>
   </div>
