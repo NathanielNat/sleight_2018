@@ -278,6 +278,23 @@
 </section>
 <!--Popular Artisans  -->
 
+
+<!-- testimonial  -->
+<section class="testi">
+  <div class="container">
+<div class="row">
+  <div class="col-12 col-lg-6">
+
+  </div>
+
+  <div class="col-12 col-lg-6">
+
+  </div>
+</div>
+  </div>
+</section>
+<!-- testimonial  -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
