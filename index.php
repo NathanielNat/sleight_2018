@@ -63,6 +63,108 @@
 </section>
 <!-- home top image -->
 
+<!-- five main categories -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 magtop">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+              <a href="#">
+                <img src="img/mechanic.svg" alt="mechanic" width="40" height="40" class="mb-2">
+                <h6 >Mechanic</h6>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+              <a href="#">
+                <img src="img/carpenter.svg" alt="Carpenterc" width="40" height="40" class="mb-2">
+                <h6 >Carpenter</h6>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+              <a href="#">
+                <img src="img/cleaner.svg" alt="Cleaning" width="40" height="40" class="mb-2">
+                <h6 >Cleaning</h6>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+              <a href="#">
+                <img src="img/plumbing.svg" alt="plumbing" width="40" height="40" class="mb-2">
+                <h6 >Plumbing</h6>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+              <a href="#">
+                <img src="img/gardening.svg" alt="gardening" width="40" height="40" class="mb-2">
+                <h6 >Gardening</h6>
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 ">
+              <a href="#">
+                <img src="img/more.svg" alt="view all" width="40" height="40" class="mb-2">
+                <h6 >View all</h6>
+              </a>
+            </div>
+        </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- five main categories -->
+
+
+<!--how itw works  -->
+<section class="sleight-mag">
+<div class="container">
+  <div class="row ">
+      <div class="col-12 text-center my-5">
+          <h2>How it Works</h2>
+          <p>See why Sleight is one of the best friends for exploring the Artisans</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+          <h1>Icon</h1>
+          <h4 class="my-3">Find Interested Artisans</h4>
+          <p>We're available 7am-11pm and you can easily reschedule online.</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+          <h1>Icon</h1>
+          <h4 class="my-3">Book Instantly</h4>
+          <p>We'll confirm your appointment and take care of your request electronically and securely.</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+          <h1>Icon</h1>
+          <h4 class="my-3">Your Pro Arrives</h4>
+          <p>An experienced, fully-equipped professional will show up on time at your doorstep!</p>
+      </div>
+  </div>
+</div>
+</section>
+<!--how itw works  -->
+
+
+<!-- become and Artisan  -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- become and Artisan  -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
