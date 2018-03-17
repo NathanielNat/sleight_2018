@@ -169,6 +169,27 @@
 </section>
 <!-- become and Artisan  -->
 
+
+<!--Popular Artisans  -->
+<section class="sleight-porpu">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center my-5">
+          <h2>Popular Artisans</h2>
+          <p>Explore a wide range of Artisans. You won’t be disappointed</p>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--Popular Artisans  -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
