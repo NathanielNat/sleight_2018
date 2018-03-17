@@ -164,10 +164,6 @@
         <div class="my-5">
   <a href="#" class="btn btn-sleight-arti">Become an Artisan</a>
         </div>
-
-
-
-
       </div>
     </div>
   </div>
