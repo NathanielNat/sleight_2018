@@ -181,8 +181,95 @@
 
       <div class="col-12">
         <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card-art">
+                  <a href="#">
+              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <div class="listing-avatar">
+                  <img src="img/path2.jpg" alt="">
+                </div>
+
+                  <h5 class="slcl">Charles Owusu</h5>
+                  <p>Carpenter</p>
+
+                <div class="mt-3">
+                  <p>Starts here</p>
+                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card-art">
+                  <a href="#">
+              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <div class="listing-avatar">
+                  <img src="img/path2.jpg" alt="">
+                </div>
+
+                  <h5 class="slcl">Nathaniel Nat</h5>
+                  <p>Carpenter</p>
+
+                <div class="mt-3">
+                  <p>Starts here</p>
+                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card-art">
+                  <a href="#">
+              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <div class="listing-avatar">
+                  <img src="img/path2.jpg" alt="">
+                </div>
+
+                  <h5 class="slcl">Micheal Nunoo</h5>
+                  <p>Carpenter</p>
+
+                <div class="mt-3">
+                  <p>Starts here</p>
+                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card-art">
+                  <a href="#">
+              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <div class="card-body">
+                <div class="listing-avatar">
+                  <img src="img/path2.jpg" alt="">
+                </div>
+
+                  <h5 class="slcl">Kofi Adams</h5>
+                  <p>Carpenter</p>
+
+                <div class="mt-3">
+                  <p>Starts here</p>
+                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
 
         </div>
+      </div>
+
+      <div class="col-12 text-center my-5">
+         <a href="#" class="btn btn-sleight-arti">View All</a>
       </div>
 
     </div>
