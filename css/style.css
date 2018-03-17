@@ -210,3 +210,14 @@ margin-bottom: 4rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
+/* SetRatingStar */
+
+.star-rating {
+  line-height:32px;
+  font-size:1em;
+}
+
+.star-rating .fa-star{color:  #35b9e5;}
+
+/* SetRatingStar */

@@ -196,8 +196,15 @@
                   <p>Carpenter</p>
 
                 <div class="mt-3">
-                  <p>Starts here</p>
-                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                  <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="whatever2" class="rating-value" value="1.9">
+                  </div>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
                 </div>
               </div>
               </a>
@@ -217,8 +224,15 @@
                   <p>Carpenter</p>
 
                 <div class="mt-3">
-                  <p>Starts here</p>
-                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                  <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="whatever2" class="rating-value" value="1.9">
+                  </div>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
                 </div>
               </div>
               </a>
@@ -238,8 +252,15 @@
                   <p>Carpenter</p>
 
                 <div class="mt-3">
-                  <p>Starts here</p>
-                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                  <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="whatever2" class="rating-value" value="1.9">
+                  </div>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
                 </div>
               </div>
               </a>
@@ -259,8 +280,15 @@
                   <p>Carpenter</p>
 
                 <div class="mt-3">
-                  <p>Starts here</p>
-                  <p> <small> <span> Map</span> Accra, Labone</small></p>
+                  <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="whatever2" class="rating-value" value="1.9">
+                  </div>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
                 </div>
               </div>
               </a>
@@ -301,6 +329,8 @@
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+    <script src="js/custom.js"></script>
 
   </body>
 </html>
