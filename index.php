@@ -160,7 +160,6 @@
       <div class="col-12 col-md-7">
         <h1 class="display-3">Are you an Artisan</h1>
         <p class="lead">earn extra cash providing services <br> to customers</p>
-
         <div class="my-5">
   <a href="#" class="btn btn-sleight-arti">Become an Artisan</a>
         </div>
