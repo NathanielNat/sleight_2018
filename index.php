@@ -80,6 +80,7 @@
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
                 <img src="img/carpenter.svg" alt="Carpenterc" width="40" height="40" class="mb-2">
+
                 <h6 >Carpenter</h6>
               </a>
             </div>
@@ -131,19 +132,19 @@
       </div>
 
       <div class="col-md-4 text-center">
-          <h1>Icon</h1>
+            <img src="img/file.svg" alt="search" width="80" height="80" class="mb-1">
           <h4 class="my-3">Find Interested Artisans</h4>
           <p>We're available 7am-11pm and you can easily reschedule online.</p>
       </div>
 
       <div class="col-md-4 text-center">
-          <h1>Icon</h1>
-          <h4 class="my-3">Book Instantly</h4>
+            <img src="img/request.svg" alt="request" width="80" height="80" class="mb-1">
+          <h4 class="my-3">Reques Instantly</h4>
           <p>We'll confirm your appointment and take care of your request electronically and securely.</p>
       </div>
 
       <div class="col-md-4 text-center">
-          <h1>Icon</h1>
+        <img src="img/user.svg" alt="user" width="80" height="80" class="mb-1">
           <h4 class="my-3">Your Pro Arrives</h4>
           <p>An experienced, fully-equipped professional will show up on time at your doorstep!</p>
       </div>

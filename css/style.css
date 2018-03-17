@@ -111,7 +111,7 @@ margin-bottom: 6rem;
 
 .sleight-become {
     min-height: 35vh;
-    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/tools.jpg);
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/become.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
