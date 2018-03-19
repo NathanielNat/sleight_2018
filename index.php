@@ -1,3 +1,7 @@
+<?php
+  include_once 'includes/dbh.php';
+  include 'users.php';
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -322,6 +326,10 @@
 </div>
   </div>
 </section>
+<?php
+$object = new Dbh;
+$object->connect();
+ ?>
 <!-- testimonial  -->
 
     <!-- Optional JavaScript -->

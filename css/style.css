@@ -221,3 +221,79 @@ margin-bottom: 4rem;
 .star-rating .fa-star{color:  #35b9e5;}
 
 /* SetRatingStar */
+
+
+/* login page  */
+.login-head {
+    min-height: 50vh;
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/tools_hammer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 15rem;
+    padding-bottom: 3rem;
+    color: #fff;
+}
+
+.card-cx-login {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 0.01rem;
+    box-shadow: 0 0.1rem 3rem rgba(0, 0, 0, 0.07);
+    margin: -5rem 6.06rem 0 6.06rem;
+}
+
+@media (max-width: 991.98px) {
+  .card-cx-login {
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 0px solid rgba(0, 0, 0, 0);
+      border-radius: 0.01rem;
+      box-shadow: 0 0.1rem 3rem rgba(0, 0, 0, 0.07);
+      margin: -5rem 1.06rem 0 1.06rem;
+  }
+}
+
+.card-cx-login .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn-cx-login {
+    color: #fff;
+    background-color: #55c57a;
+    border-color: #5dc780;
+    border-radius: 0.01rem;
+    transition: all 0.9s;
+}
+
+.btn-cx-login:hover {
+    color: #fff;
+    background-color: #55c57a;
+    border-color: #5dc780;
+    border-radius: 0.01rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.26);
+}
+
+
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
+}
+/* login page  */
