@@ -59,8 +59,8 @@
 <section class="login-head">
   <div class="container">
     <div class="row">
-
     </div>
+    <img src="../become.jpg" alt="">
   </div>
 </section>
 <!--hear image  -->
@@ -104,6 +104,8 @@
   </div>
 </section>
 <!-- login form -->
+
+
 
 </body>
 </html>

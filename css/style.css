@@ -226,7 +226,7 @@ margin-bottom: 4rem;
 /* login page  */
 .login-head {
     min-height: 50vh;
-    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/tools_hammer.jpg);
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(img/become.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
