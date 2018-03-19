@@ -37,25 +37,26 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home </a>
+        <a class="nav-link" href="#">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">How It Works</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="btn btn-sleight" href="login.php">Login</a>
+
       </li>
 
       <li class="nav-item">
-        <a class="btn btn-sleight" href="signup.php">Signup</a>
+        <a class="nav-link" href="#">Signup</a>
       </li>
     </ul>
   </div>
   </div>
 </nav>
 
-<!--hear image  -->
+
 <section class="login-head">
   <div class="container">
     <div class="row">
@@ -64,10 +65,8 @@
 
   </div>
 </section>
-<!--hear image  -->
 
-
-<!-- Login form -->
+<!-- login form -->
 <section>
   <div class="container">
     <div class="row">
@@ -75,23 +74,48 @@
         <div class="card-cx-login">
           <div class="card-body">
             <center>
-            <h1 class="cx-title-txt ">Login</h1>
+            <h1 class="cx-title-txt ">Sign up</h1>
             </center>
 
           <form action="">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                 <label for="inputText1">First Name</label>
+                 <input type="text" class="form-control" id="inputText1">
+               </div>
+               <div class="form-group col-md-6">
+                <label for="inputText2">Last Name</label>
+                <input type="text" class="form-control" id="inputText2">
+              </div>
 
-            </div>
-            <div class="form-group">
+              <div class="form-group col-12">
+               <label for="inputNumber">Tel</label>
+               <input type="text" class="form-control" id="inputNumber" placeholder="+233">
+             </div>
+
+
+              <div class="form-group col-12">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+
+            <div class="form-group col-12">
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
 
-            <div class="from-group py-3">
-              <button type="submit" class="btn btn-cx-login btn-block">log in</button>
-              <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
+            <div class="form-group col-12">
+              <label for="exampleInputPassword1">Confirm</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <div class="from-group col-12 py-3">
+              <button type="submit" class="btn btn-cx-login btn-block">Create Account</button>
+
+            </div>
+            <div class="from-group col-12 text-center">
+          <small class="form-text text-muted">By signing up, you agree to our <span><a href="">Terms</a></span> &amp; <a href="">Privacy Policy</a>.</small>
+          </div>
             </div>
           </form>
           </div>
@@ -99,14 +123,12 @@
       </div>
 
       <div class="col-12 text-center my-5">
-        <p>New to Sleight? <a href="signup.php">Sign up</a></p>
+        <p>Do you have an account with us? <a href="login.php">Log in</a></p>
       </div>
     </div>
   </div>
 </section>
 <!-- login form -->
-
-
 
 </body>
 </html>

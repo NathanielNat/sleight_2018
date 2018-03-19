@@ -226,7 +226,7 @@ margin-bottom: 4rem;
 /* login page  */
 .login-head {
     min-height: 50vh;
-    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(img/become.jpg);
+     background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/hammer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -277,16 +277,16 @@ margin-bottom: 4rem;
 
 .btn-cx-login {
     color: #fff;
-    background-color: #55c57a;
-    border-color: #5dc780;
+    background-color: #35b9e5;
+    border-color: #25b9e5;
     border-radius: 0.01rem;
     transition: all 0.9s;
 }
 
 .btn-cx-login:hover {
     color: #fff;
-    background-color: #55c57a;
-    border-color: #5dc780;
+    background-color: #10b9d1;
+    border-color: #000;
     border-radius: 0.01rem;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.26);
 }
