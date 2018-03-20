@@ -226,7 +226,7 @@ margin-bottom: 4rem;
 /* login page  */
 .login-head {
     min-height: 50vh;
-     background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/hammer.jpg);
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/hammer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -297,3 +297,35 @@ margin-bottom: 4rem;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
 }
 /* login page  */
+
+
+.blu-bck-login {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.blu-bck-signup {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.65) ,rgba(0, 0, 0, 0.65) ), url(../img/tools.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form-control-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.01rem;
+}

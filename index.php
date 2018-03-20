@@ -2,6 +2,7 @@
   include_once 'includes/dbh.php';
   include 'users.php';
  ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,28 +28,28 @@
   </head>
   <body>
 
-   <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
-    <div class="container">
- <a href="index.html"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
+     <div class="container">
+  <a href="index.php"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
 
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home </a>
+        <a class="nav-link" href="index.php">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">How It Works</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
       </li>
 
       <li class="nav-item">
-        <a class="btn btn-sleight" href="login.html">Signup</a>
+        <a class="btn btn-sleight" href="signup.php">Signup</a>
       </li>
     </ul>
   </div>
