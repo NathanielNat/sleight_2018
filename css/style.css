@@ -297,3 +297,207 @@ margin-bottom: 4rem;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
 }
 /* login page  */
+
+
+/*artisan dashbord */
+.cx-dashboard {
+    margin-top: 5rem;
+}
+
+.cx-sidenav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 5.4rem;
+    border: 1px #e2e2e2 solid;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cx-sidenav {
+      height: 100%;
+      width: 24%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      padding-top: 5.4rem;
+      border: 1px #e2e2e2 solid;
+  }
+}
+
+.cont-area {
+    padding-top: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+@media (min-width: 1200px) {
+  .cont-area {
+      padding-top: 2rem;
+      margin-left: -6rem;
+      padding-left: 1rem;
+     padding-right: 2rem;
+  }
+}
+
+
+.cont-side {
+    padding: 2rem 1rem;
+}
+
+.img-cx {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center center;
+    border: 2px #dedede solid;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    transition-duration: 0.8s;
+    -webkit-transition-duration: 0.8s;
+}
+
+
+.list-group-item.active {
+    z-index: 2;
+    color: #35b9e5;
+    background-color: #ffffff;
+    border-color: #35b9e5;
+    font-weight: 600;
+    border-left: 4px #35b9e5 solid;
+    border-radius: 1.01px;
+}
+
+.list-group-item-action:hover {
+    color: #35b9e5;
+    background-color: #ffffff;
+    padding-left: 1.5rem;
+
+}
+
+
+
+.btn-dash {
+    color: #35b9e5;
+    background-color: #fff0;
+    border-color: #35b9e5;
+    border-radius: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: all 0.9s;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.26);
+}
+
+.btn-dash:hover {
+    color:  #fff;
+    background-color:#35b9e5;
+    border-color: #35b9e5;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.26);
+}
+
+.btn-dash2 {
+    color: #fff;
+    background-color: #35b9e5;
+    border-color: #35b9e5;
+    border-radius: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: all 0.9s;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.26);
+}
+
+.btn-dash2:hover {
+    color:  #fff;
+    background-color:#35b9e5;
+    border-color: #35b9e5;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.26);
+}
+
+.card-cx-dash {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #35b9e5;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.01rem;
+    color: #fff;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.27);
+}
+
+.card-cx-dash2 {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #07c9e1;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.01rem;
+    color: #fff;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.27);
+}
+
+.cx-dash-pad {
+  margin-bottom: 5rem;
+}
+
+.converter-opad2 {
+    background: #fff;
+    padding: 3rem 0rem;
+    box-shadow: 0 0.1rem 3rem rgba(0, 0, 0, 0.07);
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    color: #35b9e5;
+    transition: all 1s;
+}
+
+.page-item.active .page-link {
+    z-index: 2;
+    color: #fff;
+    background-color: #35b9e5;
+    border-color: #35b9e5;
+}
+
+/* .page-link {
+    color: #35b9e5;
+} */
+
+.page-link:hover {
+    color: #35b9e5;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #ddd;
+}
+
+/* artisan dashboard*/

@@ -79,7 +79,7 @@
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
                 <img src="img/mechanic.svg" alt="mechanic" width="40" height="40" class="mb-2">
-                <h6 >Mechanic</h6>
+                <h6 >Electrician</h6>
               </a>
             </div>
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
@@ -92,19 +92,19 @@
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
                 <img src="img/cleaner.svg" alt="Cleaning" width="40" height="40" class="mb-2">
-                <h6 >Cleaning</h6>
+                <h6 >Mason</h6>
               </a>
             </div>
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
                 <img src="img/plumbing.svg" alt="plumbing" width="40" height="40" class="mb-2">
-                <h6 >Plumbing</h6>
+                <h6 >Plumber</h6>
               </a>
             </div>
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
                 <img src="img/gardening.svg" alt="gardening" width="40" height="40" class="mb-2">
-                <h6 >Gardening</h6>
+                <h6 >Painter</h6>
               </a>
             </div>
 
@@ -167,7 +167,7 @@
         <h1 class="display-3">Are you an Artisan</h1>
         <p class="lead">earn extra cash providing services <br> to customers</p>
         <div class="my-5">
-  <a href="#" class="btn btn-sleight-arti">Become an Artisan</a>
+  <a href="become.php" class="btn btn-sleight-arti">Become an Artisan</a>
         </div>
       </div>
     </div>
