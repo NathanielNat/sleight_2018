@@ -58,54 +58,51 @@
     </div>
     </nav>
 
-    <!--hear image  -->
-<section class="login-head">
-  <div class="container">
-    <div class="row">
-    </div>
-  </div>
-</section>
-<!--hear image  -->
+ <!-- new login form design -->
+ <section class="sleight-porpu">
+   <div class="blu-bck-login"></div>
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-6">
+       </div>
+       <div class="col-lg-6">
+         <div class="row">
+            <div class="col-12 text-center mt-5">
+            <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
+              <h5 class="mb-3">Welcome Back <span> | <small>Login</small> </span>  </h5>
+            </div>
+         </div>
+         <form action="">
+           <div class="form-group">
+             <label for="exampleInputEmail1">Email address</label>
+             <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 
-<!--form design -->
-<section>
-<div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <div class="card-cx-login">
-          <div class="card-body">
-     <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
-       <h5 class="mb-3">Welcome Back <span> | <small>Login</small> </span>  </h5>
+           </div>
+           <div class="form-group">
+             <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+           </div>
+
+           <div class="from-group py-3 text-center">
+             <button type="submit" class="btn btn-sleight-arti">login</button>
+             <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
+           </div>
+         </form>
+
+         <div class=" text-center my-5">
+           <p>New to Sleight? <a href="signup.php">Sign up</a></p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- new login form design -->
 
 
-  <form action="">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-    </div>
 
-    <div class="from-group py-3 text-center">
-      <button type="submit" class="btn btn-sleight-arti">login</button>
-      <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
-    </div>
-  </form>
 
-  <div class=" text-center my-5">
-    <p>New to Sleight? <a href="signup.php">Sign up</a></p>
-  </div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
-<!--Form design -->
+
 </body>
 </html>
