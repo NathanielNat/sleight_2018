@@ -74,7 +74,7 @@
 
                 <div class="col-12 mt-1">
                   <div class="list-group">
-                    <a href="dashboard.html" class="list-group-item list-group-item-action active">Dashboard</a>
+                    <a href="artisan_dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
                   </div>
                   <hr>
                 </div>
@@ -91,7 +91,7 @@
                   <div class="col-12">
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                    <a href="account.html" class="list-group-item list-group-item-action">Account  </a>
+                    <a href="artisan_account.php" class="list-group-item list-group-item-action">Account  </a>
                     <a href="securitycenter.html" class="list-group-item list-group-item-action">Availability</a>
 
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>

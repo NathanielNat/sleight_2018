@@ -73,7 +73,7 @@
 
                 <div class="col-12 mt-1">
                   <div class="list-group">
-                    <a href="dashboard.html" class="list-group-item list-group-item-action ">Dashboard</a>
+                    <a href="artisan_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
                   </div>
                   <hr>
                 </div>
@@ -93,7 +93,7 @@
                 <div class="col-12">
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                    <a href="account.html" class="list-group-item list-group-item-action active">Account  </a>
+                    <a href="artisa_account.php" class="list-group-item list-group-item-action active">Account  </a>
                     <a href="securitycenter.html" class="list-group-item list-group-item-action">Security Center</a>
                     <a href="support.html" class="list-group-item list-group-item-action">Support</a>
                     <a href="faq.html" class="list-group-item list-group-item-action">F.A.Q</a>
@@ -150,6 +150,7 @@
                                              </div>
                                              <div class="account-pane  mt-3">
                                                   <div class="form-group">
+                                                    <h4 class="cx-color">Personal Information</h4>
                                                        <div class="row">
 
 
@@ -185,7 +186,16 @@
                                         <div class="col-md-6 mb-4">
                                              <div class="account-pane ">
 
-                                                  <h4 class="cx-color">Change Your Passowrd</h4>
+                                                  <h4 class="cx-color">Work Information</h4>
+                                                  <div class="form-group col-12">
+                                                     Select artisan type
+                             <label class="radio-inline">  <input type = "radio" name="artisan_cat" value="mason" checked>Mason </label>
+                             <label class="radio-inline"><input type="radio" name="artisan_cat" value="carpenter">Carpenter</label>
+                             <label class="radio-inline"><input type ="radio" name="artisan_cat" value="painter">Painter</label>
+                             <label class="radio-inline"><input type="radio" name="artisan_cat" value="electrician">Electrician</label>
+                             <label class="radio-inline"><input type="radio" name="artisan_cat" value="plumber">Plumber</label>
+
+                                                  </div>
                                                   <div class="form-group col-12">
                                                        <label for="currentPassword"> Current Password</label><br>
                                                        <input type="password" class="form-control">
