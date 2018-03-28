@@ -21,10 +21,10 @@ class Dbh {
      // $created_at = date("Y-m-d");
 
      // $sql = "INSERT INTO users (email) VALUES ('psalmnat@gmail.com')";
-     $sql = "INSERT INTO users (email,password,created_at) VALUES ('mensah@gmail.com','roij09323gt',$created_at)";
-
-     $pdo->exec($sql);
-
+     // $sql = "INSERT INTO users (email,password,created_at) VALUES ('mensah@gmail.com','roij09323gt',$created_at)";
+     //
+     // $pdo->exec($sql);
+     return $pdo;
    } catch (PDOException $e) {
      echo "Connection Failed: ".$e->getMessage();
    }

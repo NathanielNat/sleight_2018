@@ -48,7 +48,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="btn btn-sleight" href="login.html">Signup</a>
+        <a class="btn btn-sleight" href="signup.php">Signup</a>
       </li>
     </ul>
   </div>
@@ -79,14 +79,7 @@
                   <hr>
                 </div>
 
-                <div class="col-12">
-                  <div class="list-group">
-                    <p class="list-group-item mute"> <small>TRANSACTION</small> </p>
-                    <a href="buyorders.html" class="list-group-item list-group-item-action">Buy Oders  </a>
-                    <a href="sellorders.html" class="list-group-item list-group-item-action">Sell Orders</a>
-                  </div>
-                    <hr>
-                </div>
+
 
                   <div class="col-12">
                   <div class="list-group">
@@ -182,15 +175,7 @@
                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin Cash</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
+                  
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>

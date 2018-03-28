@@ -8,7 +8,9 @@ body {
     text-align: left;
     background-color: #fff;
 }
-
+span{
+  display: block;
+}
 
 .sleight-headbg {
     background: linear-gradient( to right bottom, #1bbcb2,#37b9e9 );
@@ -538,5 +540,23 @@ margin-bottom: 4rem;
 .cx-color{
   color:#35b9e5;
 }
+
+.btn-cx4 {
+    color: #35b9e5;
+    background-color: #fff;
+    border-color: #025470;
+    border-radius: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: all 0.9s;
+}
+
+.btn-cx4:hover {
+    color:  #fff;
+    background-color:#35b9e5;
+    border-color: #35b9e5;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.26);
+}
+
 
 /* dashboard */

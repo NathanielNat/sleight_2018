@@ -6,7 +6,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Sleight | Your No1 Artisan Plartform </title>
+    <title>Sleight | Your No1 Artisan Platform </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -19,3 +19,21 @@ SetRatingStar();
 $(document).ready(function() {
 
 });
+
+function showSkills(str){
+ if (str == ""){
+   document.getElementById("skillset").innerHTML ="";
+   return;
+ }
+ else {
+   xttp = new XMLHttpRequest();
+   xttp.onreadystatechange = function () {
+     if (this.readyState == 4 && this.status ==200 ) {
+       document.getElementById("skillset").innerHTML = this.responseText;
+
+     }
+   };
+   xmlhttp.open("GET","taskers.php?q=" + str,true);
+   xmlhttp.send();
+ }
+}

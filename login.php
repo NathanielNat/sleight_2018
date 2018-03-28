@@ -75,7 +75,7 @@
         <div class="card-cx-login">
           <div class="card-body">
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
-       <h5 class="mb-3">Welcome Back <span> | <small>Login</small> </span>  </h5>
+       <h5 class="mb-3"><span>Welcome Back  | <small>Login</small> </span>  </h5>
 
 
   <form action="">
