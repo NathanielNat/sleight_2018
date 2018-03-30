@@ -74,7 +74,7 @@
 
                 <div class="col-12 mt-1">
                   <div class="list-group">
-                    <a href="artisan_dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
+                    <a href="customer_dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
                   </div>
                   <hr>
                 </div>
@@ -84,9 +84,8 @@
                   <div class="col-12">
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                    <a href="artisan_account.php" class="list-group-item list-group-item-action">Account  </a>
-                    <a href="securitycenter.html" class="list-group-item list-group-item-action">Availability</a>
-
+                    <a href="customer_account.php" class="list-group-item list-group-item-action">Account</a>
+                      <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
                   </div>
                 </div>
@@ -103,7 +102,7 @@
 
           <div class="row mb-4">
             <div class="col-md-6 mb-4">
-              <h3 class="mt-5 cx-color">Dashboard</h3>
+              <h3 class="mt-5 cx-color">Client's  Dashboard</h3>
             </div>
 
           </div>
@@ -147,22 +146,18 @@
                 <table class="table  table-striped">
                 <thead>
                   <tr>
-                    <th scope="col-2">Task #</th>
+                    <th scope="col-1">Task #</th>
                     <th scope="col-2">Date of Assignment</th>
-                    <th scope="col-2">Client</th>
-                    <th scope="col-2">location</th>
-                    <th scope="col-2">GHC</th>
-                    <th scope="col-1">Status</th>
-                    <th scope="col-1">Action</th>
+                    <th scope="col-3">Artisan Assigned</th>
+                    <th scope="col-2">Status</th>
+                    <th scope="col-2">Rating</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
+                    <td>Bitcoin fdkjnfvlkfndl</td>
                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
@@ -170,8 +165,7 @@
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Litecoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
+
                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
@@ -180,54 +174,42 @@
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Ethereum</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Ethereum</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                   <tr>
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
+                     <td>Completed</td>
                     <td>Sent</td>
                   </tr>
                 </tbody>
@@ -236,107 +218,7 @@
                   <!--Task Completed -->
 
 
-              <!-- <div class="tab-pane fade table-responsive " id="tasks-assigned" role="tabpanel" aria-labelledby="pills-sell-tab">
-                <table class="table  table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col-2">Order #</th>
-                    <th scope="col-2">Date</th>
-                    <th scope="col-2">E-Currency</th>
-                    <th scope="col-2">USD</th>
-                    <th scope="col-2">GHC</th>
-                    <th scope="col-1">Status</th>
-                    <th scope="col-1">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                </tbody>
-              </table>
-              </div> -->
-
-
-            </div>
+              </div>
               </div>
             </div>
           </div>

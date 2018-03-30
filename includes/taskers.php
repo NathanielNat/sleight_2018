@@ -1,7 +1,7 @@
 <?php
 require 'connection.php';
 
- $type = $_POST['rate_value'];
+ $type = $_POST['skills'];
   $sql = "SELECT * FROM artisan_skills WHERE type = '$type'";
   $q = $conn->query($sql);
   $q->setFetchMode(PDO::FETCH_ASSOC);

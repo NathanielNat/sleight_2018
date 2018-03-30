@@ -61,7 +61,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="display-3"> Your No 1 <span class="slcl">Artisan </span> <br>Plartfrom</h1>
+        <h1 class="display-3"> Your No 1 <span class="slcl">Artisan </span> Platform</h1>
         <p class="lead" >Hire local professionals , hand-picked home services Providers <br> for pretty much anything.</p>
       </div>
     </div>
@@ -328,8 +328,8 @@
   </div>
 </section>
 <?php
-$object = new Dbh;
-$object->connect();
+// $object = new Dbh;
+// $object->connect();
  ?>
 <!-- testimonial  -->
 

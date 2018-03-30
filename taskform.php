@@ -1,7 +1,7 @@
 <?php
   include_once 'includes/connection.php';
   include 'includes/users.php';
-  include 'includes/tasks.php';
+  include 'includes/taskers.php';
  ?>
   <!doctype html>
   <html lang="en">
@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- google fonts used -->
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 
 
 
@@ -80,7 +81,7 @@
 
                   <div class="col-12 mt-1">
                     <div class="list-group">
-                      <a href="artisan_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
+                      <a href="customer_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
                     </div>
                     <hr>
                   </div>
@@ -88,8 +89,8 @@
                   <div class="col-12">
                     <div class="list-group">
                       <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                      <a href="artisan_account.php" class="list-group-item list-group-item-action active">Account  </a>
-                      <a href="artisa_account.php" class="list-group-item list-group-item-action ">Availability  </a>
+                      <a href="customer_account.php" class="list-group-item list-group-item-action ">Account  </a>
+                        <a href="taskform.php" class="list-group-item list-group-item-action active">Create Task</a>
                       <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
 
                     </div>
@@ -107,7 +108,7 @@
 
               <div class="row mb-4">
                 <div class="col-12 col-md-6 col-lg-12">
-                  <h3 class="mt-5 cx-color">Account Settings </h3>
+                  <h3 class="mt-5 cx-color">Create Tasks</h3>
                 </div>
               </div>
 
@@ -119,7 +120,7 @@
 
 
                   <div class="col-md-6 mb-4 ">
-                    <div class="account-pane ">
+                    <!-- <div class="account-pane ">
                       <div class="row">
                         <div class="col-md-6">
                           <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
@@ -141,35 +142,48 @@
 
                       </div>
 
-                    </div>
+                    </div> -->
               </form>
               <form>
-                <!-- Artisan information-->
-                <div class="account-pane  mt-3">
-                  <div class="form-group">
-                    <h4 class="cx-color">Personal Information</h4>
+                <!-- Task form-->
+                <div class="account-pane  ">
+
+                    <h4 class="cx-color">Task Form</h4>
                     <div class="row">
+                      <div class="form-group">
 
 
-                      <div class="col-md-6 form-group ">
-                        <label for="FirstName">First name</label><br>
-                        <input type="text" class="form-control">
-                      </div>
-                      <div class="col-md-6 form-group ">
-                        <label for="LastName">Last name</label><br>
-                        <input type="text" class="form-control">
-                      </div>
 
 
-                      <div class="form-group col-12">
-                        <label for="Email">Email</label><br>
-                        <input type="email" class="form-control" placeholder="myemail@email.com">
-                      </div>
+                       <h5>     Select artisan type</h5>
 
-                      <div class="form-group col-12">
-                        <label for="number">Number</label><br>
-                        <input type="text" class="form-control" placeholder="0245073066">
-                      </div>
+                        <label class="radio-inline rad">  <input type = "radio" name="artisan_cat" value="mason" onclick="myfunction()" class=" form-control ">Mason </label>
+                        <label class="radio-inline rad"><input type="radio" name="artisan_cat" value="carpenter" onclick="myfunction()" class=" form-control">Carpenter</label>
+                        <label class="radio-inline rad"><input type ="radio" name="artisan_cat" value="painter" onclick="myfunction()" class=" form-control">Painter</label>
+                        <label class="radio-inline rad"><input type="radio" name="artisan_cat" value="electrician"onclick="myfunction()" class=" form-control">Electrician</label>
+                        <label class="radio-inline rad"><input type="radio" name="artisan_cat" value="plumber" onclick="myfunction()" class=" form-control">Plumber</label>
+
+
+                        <div id="skillset">
+                            <!--Skillset is inserted from database here -->
+                        </div>
+
+                        <div class="form-group col-12">
+                          <br>
+                           <textarea name="name" rows="5" cols="50" class=" form-control" placeholder="Brief Descrition Of Task"></textarea>
+                        </div>
+                            <!-- Task form  -->
+                        <div class="form-group col-12">
+                          <label for="task location">Locaion Of Task</label><br>
+                          <input type="text" class="form-control"  name="task_loction">
+                        </div>
+                        <div class="form-group col-12">
+                        <select class="form-control" name="district" id="district" onclick="loc()">
+                          <option selected="selected">Districs where task is located</option>
+                          <!-- Districts inserted from database here -->
+                          </select>
+                        </div>
+
 
                     </div>
 
@@ -183,64 +197,41 @@
                 <div class="col-md-6 mb-4">
                   <div class="account-pane ">
 
-                    <h4 class="cx-color">Work Information</h4>
+
+
                     <div class="form-group col-12">
-                      <h5>     Select artisan type</h5>
-
-                      <label class="radio-inline">  <input type = "radio" name="artisan_cat" value="mason" onclick="myfunction()">Mason </label>
-                      <label class="radio-inline"><input type="radio" name="artisan_cat" value="carpenter" onclick="myfunction()">Carpenter</label>
-                      <label class="radio-inline"><input type ="radio" name="artisan_cat" value="painter" onclick="myfunction()">Painter</label>
-                      <label class="radio-inline"><input type="radio" name="artisan_cat" value="electrician"onclick="myfunction()">Electrician</label>
-                      <label class="radio-inline"><input type="radio" name="artisan_cat" value="plumber" onclick="myfunction()">Plumber</label>
-
-                      <div class="col-md-12 row">
-                        <div id="skillset">
-                            <!--Skillset is inserted from database here -->
-                        </div>
 
 
-                        <div class="col-md-12 form-group ">
-                          <label for="exp_years">Number of Years of Experience</label><br>
-                          <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-md-12 form-group ">
-
-                          <!-- <div class="dropdown show">
-
-                        < -->
-
-                          <select class="form-control" name="experience-level" id="experience-level" >
-                            <option selected="selected">Select Skill level</option>
-                          <option value="apprentice">Apprentice</option>
-                            <option value="master">Master</option>
-                            <option value="pro">Professional</option>
-                            </select>
+                          <h3>Select Time</h3>
+                          <span>
+                              <input id="datetimepicker" type="text" placeholder="click to select date and time" class="form-control">
+                          </span>
+                          <script>
+                              $(function () {
+                                  $('#datetimepicker').datetimepicker();
+                              });
+                          </script>
 
 
-                        </div>
+                      </div>
 
+
+
+                      <div class="text-center mt-5">
+                         <a class="btn btn-large btn-cx4 " href="#">Find Artisan </a>
                       </div>
 
 
                     </div>
                     <div class="form-group col-12">
-                      <h4 class="mt-5 cx-color">Security Settings </h4>
-                      <label for="currentPassword"> Current Password</label><br>
-                      <input type="password" class="form-control">
+
                     </div>
                     <div class="form-group col-12">
-                      <label for="newPasssword"> New Password</label><br>
-                      <input type="password" class="form-control">
-                    </div>
-                    <div class="form-group col-12">
-                      <label for="confirm_password">Confirm Password</label><br>
-                      <input type="password" class="form-control">
+
                     </div>
                   </div>
 
-                  <div class="text-center mt-5"> <a class="btn btn-cx4 " href="#">Update</a>
-                  </div>
+
                 </div>
 
                 </div>
@@ -269,6 +260,9 @@
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+
+
     <script>
       function myfunction() {
         var skill_set = document.getElementsByName('artisan_cat');
@@ -284,10 +278,10 @@
 
         $.ajax({
 
-          url: "includes/taskers.php",
+          url: "includes/tasks.php",
           method: "POST",
           data: {
-          skills: skills
+            skills: skills
           },
           dataType: "text",
           success: function(data) {
