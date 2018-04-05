@@ -17,16 +17,5 @@ require 'connection.php';
 
    <?php
 
-// $district  = $_POST['zone']
-// $dis = "SELECT  FROM * districts ";
-// $q_1 = $conn->query($dis);
-// $q_1->setFetchMode(PDO::FETCH_ASSOC);
-// while($loc = $q_1->fetch()):
-    ?>
-    <!-- <span>
 
-      <option value="" name = "districts[]" value="="></option> </span> -->
-
-    <?php
-// endwhile;
-    ?>
+?>

@@ -2,12 +2,13 @@
   include_once 'includes/connection.php';
   include 'includes/users.php';
   include 'includes/taskers.php';
+
  ?>
   <!doctype html>
   <html lang="en">
 
   <head>
-    <title>C Xchnage | Account Settings</title>
+    <title>Sleight| Account Settings</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +17,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#55C57A">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 
 
     <!-- custom -->
@@ -27,9 +29,19 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- google fonts used -->
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Date and time picker-->
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet" >
 
 
+
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+      <script src="js/popper.min.js"></script>
+              <script src="js/bootsrap.min.js"></script>
+          <script src="js/moment.min.js"></script>
+
+          <script src="js/bootstrap-datetimepicker.min.js"></script>
 
   </head>
 
@@ -112,40 +124,11 @@
                 </div>
               </div>
 
-              <form action="">
+<!-- Task form-->
+              <form action="task.php" method="POST">
 
                 <div class="row cx-dash-pad">
-
-
-
-
                   <div class="col-md-6 mb-4 ">
-                    <!-- <div class="account-pane ">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="col-md-12 ">
-                            <div class="col-md-12">
-                              <h5 class="cx-color "> Charles Owusu</h5>
-                              <p>Artisan Caterory (Painter)</p>
-
-                            </div>
-                            <div class="col-md-12 mt-5">
-                              <input type="file">
-                            </div>
-
-                          </div>
-                        </div>
-
-                      </div>
-
-                    </div> -->
-              </form>
-              <form>
-                <!-- Task form-->
                 <div class="account-pane  ">
 
                     <h4 class="cx-color">Task Form</h4>
@@ -153,7 +136,7 @@
                       <div class="form-group">
 
 
-
+                        <div class="form-group col-12">
 
                        <h5>     Select artisan type</h5>
 
@@ -167,6 +150,7 @@
                         <div id="skillset">
                             <!--Skillset is inserted from database here -->
                         </div>
+                      </div>
 
                         <div class="form-group col-12">
                           <br>
@@ -179,9 +163,19 @@
                         </div>
                         <div class="form-group col-12">
                         <select class="form-control" name="district" id="district" onclick="loc()">
-                          <option selected="selected">Districs where task is located</option>
+                          <option selected="selected" disabled >Select district where task is located</option>
                           <!-- Districts inserted from database here -->
+
+                          <?php
+
+                          $rows = $conn->query("SELECT * FROM districts");
+                          // print_r($rows);
+                          foreach ($rows as $district) {
+                            echo "<option >". $district["name"] ."</option>";
+                          }
+                           ?>
                           </select>
+
                         </div>
 
 
@@ -196,45 +190,35 @@
 
                 <div class="col-md-6 mb-4">
                   <div class="account-pane ">
-
-
-
-                    <div class="form-group col-12">
-
-
-                          <h3>Select Time</h3>
-                          <span>
-                              <input id="datetimepicker" type="text" placeholder="click to select date and time" class="form-control">
-                          </span>
-                          <script>
-                              $(function () {
-                                  $('#datetimepicker').datetimepicker();
-                              });
-                          </script>
-
-
-                      </div>
-
-
+                    <div>
+                                  <h3>Select Time</h3>
+                  <span>
+                      <input id="datetimepicker" type="text" placeholder="click to select date and time" style="width:100%;">
+                  </span>
+                  <script>
+                      $(function () {
+                          $('#datetimepicker').datetimepicker();
+                      });
+                  </script> </div>
 
                       <div class="text-center mt-5">
                          <a class="btn btn-large btn-cx4 " href="#">Find Artisan </a>
                       </div>
-
+                        <div class="form-group col-12">
+                          lksd
+                      </div>
+                      <div class="form-group col-12">
+                          lkndf
+                      </div>
 
                     </div>
-                    <div class="form-group col-12">
 
-                    </div>
-                    <div class="form-group col-12">
-
-                    </div>
                   </div>
 
 
                 </div>
 
-                </div>
+
               </form>
 
 
@@ -243,24 +227,14 @@
           <!-- contant area-->
 
         </div>
+      </div>
     </section>
     <!-- dashboard -->
 
 
-
-
-
-
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
+
 
 
     <script>

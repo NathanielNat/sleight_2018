@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/dbh.php';
-  include 'database/users.php';
+  include 'includes/users.php';
  ?>
 
 <!doctype html>
