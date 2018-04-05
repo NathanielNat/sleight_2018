@@ -17,8 +17,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#55C57A">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
 
 
     <!-- custom -->
@@ -128,8 +128,8 @@
               <form action="task.php" method="POST">
 
                 <div class="row cx-dash-pad">
-                  <div class="col-md-6 mb-4 ">
-                <div class="account-pane  ">
+                  <div class="col-md-5 mb-4 ">
+                <div class="account-pane">
 
                     <h4 class="cx-color">Task Form</h4>
                     <div class="row">
@@ -188,7 +188,7 @@
                 </div>
 
 
-                <div class="col-md-6 mb-4">
+                <div class="col-md-7 mb-4">
                   <div class="account-pane ">
                     <div>
                                   <h3>Select Time</h3>
@@ -204,14 +204,91 @@
                       <div class="text-center mt-5">
                          <a class="btn btn-large btn-cx4 " href="#">Find Artisan </a>
                       </div>
-                        <div class="form-group col-12">
-                          lksd
-                      </div>
-                      <div class="form-group col-12">
-                          lkndf
-                      </div>
+
 
                     </div>
+                    <!-- Artisan Recomendations to customer -->
+                    <div class="account-pane mt-3" >
+                      <div class="row">
+                        <div class="col-md-6">
+                              <div class="col-md-12">
+                                <img src="img/path3.jpg" alt="" class="img-fluid acc_photo img-cx2 acc_photo">
+
+                                  <h4 class="cx-color mt-2 text-center"> Nathaniel Nat</h4>
+
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="col-md-12">
+                        <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
+                        <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
+                        <p class="cx-color mb-1">How Can I help</p>
+                        <p>Contact me for your quick and efficient capentry works. With a diploma in wood work and serval years of experence, will fix all your problems </p>
+                         <a class="btn btn-large btn-cx4 " href="#">Select and continue </a>
+
+
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                  </div>
+                  <!-- Artisan Recomendations to customer -->
+                  <div class="account-pane mt-3" >
+                    <div class="row">
+                      <div class="col-md-6">
+                            <div class="col-md-12">
+                              <img src="img/path3.jpg" alt="" class="img-fluid acc_photo img-cx2 acc_photo">
+
+                                <h4 class="cx-color mt-2 text-center"> Nathaniel Nat</h4>
+
+                            </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="col-md-12">
+                      <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
+                      <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
+                      <p class="cx-color mb-1">How Can I help</p>
+                      <p>Contact me for your quick and efficient capentry works. With a diploma in wood work and serval years of experence, will fix all your problems </p>
+                       <a class="btn btn-large btn-cx4 " href="#">Select and continue </a>
+
+
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="account-pane mt-3" >
+                  <div class="row">
+                    <div class="col-md-6">
+                          <div class="col-md-12">
+                            <img src="img/path3.jpg" alt="" class="img-fluid acc_photo img-cx2 acc_photo">
+
+                              <h4 class="cx-color mt-2 text-center"> Nathaniel Nat</h4>
+
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-12">
+                    <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
+                    <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
+                    <p class="cx-color mb-1">How Can I help</p>
+                    <p>Contact me for your quick and efficient capentry works. With a diploma in wood work and serval years of experence, will fix all your problems </p>
+                     <a class="btn btn-large btn-cx4 " href="#">Select and continue </a>
+
+
+                      </div>
+                    </div>
+
+
+                  </div>
+
+              </div>
+
 
                   </div>
 
