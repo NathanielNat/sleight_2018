@@ -89,7 +89,7 @@
                     <div class="list-group">
                       <p class="list-group-item mute"> <small> SETTINGS</small></p>
                       <a href="artisan_account.php" class="list-group-item list-group-item-action active">Account  </a>
-                      <a href="artisa_account.php" class="list-group-item list-group-item-action ">Availability  </a>
+
                       <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
 
                     </div>
@@ -199,8 +199,8 @@
                         </div>
 
 
-                        <div class="col-md-12 form-group ">
-                          <label for="exp_years">Number of Years of Experience</label><br>
+                        <div class="col-md-12 form-group mt-4">
+                          <label for="exp_years ">Number of Years of Experience</label><br>
                           <input type="text" class="form-control">
                         </div>
 
@@ -210,13 +210,32 @@
 
                         < -->
 
-                          <select class="form-control" name="experience-level" id="experience-level" >
+                          <select class="form-control mt-3" name="experience-level" id="experience-level" >
                             <option selected="selected">Select Skill level</option>
                           <option value="apprentice">Apprentice</option>
                             <option value="master">Master</option>
                             <option value="pro">Professional</option>
                             </select>
 
+                            <select class="form-control mt-4" name="district" id="district" onclick="loc()">
+                              <option selected="selected" disabled >Select district where you are based</option>
+                              <!-- Districts inserted from database here -->
+
+                              <?php
+
+                              $rows = $conn->query("SELECT * FROM districts");
+                              // print_r($rows);
+                              foreach ($rows as $district) {
+                                echo "<option >". $district["name"] ."</option>";
+                              }
+                               ?>
+                              </select>
+
+
+                        </div>
+                        <div class="col-md-12 form-group">
+                          <h6 class="cx-color">Give a brief description of what you do</h6>
+                          <textarea name="name" rows="4" cols="50" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140"></textarea>
 
                         </div>
 

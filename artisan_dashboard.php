@@ -85,7 +85,7 @@
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
                     <a href="artisan_account.php" class="list-group-item list-group-item-action">Account  </a>
-                    <a href="securitycenter.html" class="list-group-item list-group-item-action">Availability</a>
+                    
 
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
                   </div>

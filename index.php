@@ -109,12 +109,12 @@
               </a>
             </div>
 
-            <div class="col-6 col-md-4 col-xl-2 text-center my-1 ">
+            <!-- <div class="col-6 col-md-4 col-xl-2 text-center my-1 ">
               <a href="#">
                 <img src="img/more.svg" alt="view all" width="40" height="40" class="mb-2">
                 <h6 >View all</h6>
               </a>
-            </div>
+            </div> -->
         </div>
           </div>
         </div>

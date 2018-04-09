@@ -30,7 +30,7 @@
     <!-- google fonts used -->
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Date and time picker-->
-    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
     <link href="css/bootstrap-glyphicons.css" rel="stylesheet" >
 
 
@@ -38,10 +38,10 @@
 
     <script src="js/jquery.js" type="text/javascript"></script>
       <script src="js/popper.min.js"></script>
-              <script src="js/bootsrap.min.js"></script>
+              <script src="js/bootsrap.js"></script>
           <script src="js/moment.min.js"></script>
 
-          <script src="js/bootstrap-datetimepicker.min.js"></script>
+          <script src="js/bootstrap-datetimepicker.js"></script>
 
   </head>
 
@@ -154,7 +154,7 @@
 
                         <div class="form-group col-12">
                           <br>
-                           <textarea name="name" rows="5" cols="50" class=" form-control" placeholder="Brief Descrition Of Task"></textarea>
+                          <textarea name="name" rows="4" cols="50" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140"></textarea>
                         </div>
                             <!-- Task form  -->
                         <div class="form-group col-12">
@@ -193,7 +193,7 @@
                     <div>
                                   <h3>Select Time</h3>
                   <span>
-                      <input id="datetimepicker" type="text" placeholder="click to select date and time" style="width:100%;">
+                      <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control">
                   </span>
                   <script>
                       $(function () {
