@@ -8,7 +8,7 @@
   <html lang="en">
 
   <head>
-    <title>Sleight| Account Settings</title>
+    <title>Sleight| Taskform</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,9 +38,9 @@
 
     <script src="js/jquery.js" type="text/javascript"></script>
       <script src="js/popper.min.js"></script>
-              <script src="js/bootsrap.js"></script>
+              <script src="js/bootstrap.js"></script>
           <script src="js/moment.min.js"></script>
-
+          <script src="js/custom.js"></script>
           <script src="js/bootstrap-datetimepicker.js"></script>
 
   </head>
@@ -60,16 +60,11 @@
               <a class="nav-link" href="index.php">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">How It Works</a>
+              <a class="nav-link" href="#">User name</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
-            </li>
 
-            <li class="nav-item">
-              <a class="btn btn-sleight" href="signup.php">Signup</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -101,8 +96,9 @@
                   <div class="col-12">
                     <div class="list-group">
                       <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                      <a href="customer_account.php" class="list-group-item list-group-item-action ">Account  </a>
-                        <a href="taskform.php" class="list-group-item list-group-item-action active">Create Task</a>
+                      <a href="user_account.php" class="list-group-item list-group-item-action">Account  </a>
+                      <a href="become_artisan.php" class="list-group-item list-group-item-action"> Become an Artisan</a>
+                      <a href="taskform.php" class="list-group-item list-group-item-action active">Create Task</a>
                       <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
 
                     </div>
@@ -178,6 +174,24 @@
 
                         </div>
 
+                        <div class="mt-5 col-12 form-group">
+                          <div>
+                                        <h3>Select Time</h3>
+                        <span>
+                            <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control">
+                        </span>
+                        <script>
+                            $(function () {
+                                $('#datetimepicker').datetimepicker();
+                            });
+                        </script> </div>
+
+                            <div class="text-center mt-5">
+                               <a class="btn btn-large btn-cx4 " href="#">Find Artisan </a>
+                            </div>
+
+
+                          </div>
 
                     </div>
 
@@ -189,24 +203,7 @@
 
 
                 <div class="col-md-7 mb-4">
-                  <div class="account-pane ">
-                    <div>
-                                  <h3>Select Time</h3>
-                  <span>
-                      <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control">
-                  </span>
-                  <script>
-                      $(function () {
-                          $('#datetimepicker').datetimepicker();
-                      });
-                  </script> </div>
 
-                      <div class="text-center mt-5">
-                         <a class="btn btn-large btn-cx4 " href="#">Find Artisan </a>
-                      </div>
-
-
-                    </div>
                     <!-- Artisan Recomendations to customer -->
                     <div class="account-pane mt-3" >
                       <div class="row">
@@ -224,7 +221,7 @@
                         <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
                         <p class="cx-color mb-1">How Can I help</p>
                         <p>Contact me for your quick and efficient capentry works. With a diploma in wood work and serval years of experence, will fix all your problems </p>
-                         <a class="btn btn-large btn-cx4 " href="#">Select and continue </a>
+                         <a class="btn btn-large btn-cx4 " href="#" id="post" data-toggle="modal" data-target="#exampleModal">Select and continue </a>
 
 
                           </div>
@@ -234,7 +231,64 @@
                       </div>
 
                   </div>
+                  <!-- Modal containing task information for artisan to confirm -->
+                  <!-- <div class="modal fade" id="task-modal" role="dialog ">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <button type = "button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Confirm Task information</h4>
+                        </div>
+
+                        <div class="account-pane modal-content">
+                          <h4 class="cx-color mb-4">Your Schedule</h4>
+                          <div class="row">
+
+                          <div class="col-md-7" style="border-right: #35b9e5 1px solid !important;">
+                              <p>You have reqsted for a service from</p>
+                              <div class="row mb-3">
+                                <div class="col-md-6">
+                                      <img src="img/path3.jpg" alt="" class="rounded-circle  img-fluid img-cx3">
+                                </div>
+                                <div class="col-md-6 mt-5 ">
+                                  <h4 class="cx-color"> Nathaniel Nat</h4>
+                                </div>
+                              </div>
+                              <p><i class="fa fa-map-marker" aria-hidden="true"></i> At -Sakumono in the  ** Tema Metropolitan Assembly</p>
+                              <p>On Date  at time </p>
+
+                            </div>
+                          <div class="col-md-5 ">
+                              <h5 class="cx-color"> Desciption of Task</h5>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+                              <div class="row">
+                                <div class="col-md-4 offset-md-1">
+                                  <button type="submit" class="btn btn-outline-primary" href ="#" style="cursor: pointer;">Confirm</button>
+                                </div>
+                                <div class="col-md-4 offset-md-1">
+                                  <button type="submit" class="btn btn-outline-danger" href="#" style="cursor: pointer;">Cancel</button>
+                                </div>
+
+                              </div>
+
+                                </div>
+                          </div>
+                        </div>
+
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-large" data-dismiss="modal">Close</button>
+                    </div>
+                      </div>
+
+                    </div>
+
+                  </div> -->
                   <!-- Artisan Recomendations to customer -->
+                  <!-- Button trigger modal -->
+
+
+
                   <div class="account-pane mt-3" >
                     <div class="row">
                       <div class="col-md-6">
@@ -307,6 +361,61 @@
       </div>
     </section>
     <!-- dashboard -->
+
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Your Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body task-modal pl-5 pr-5">
+
+              <h4 class="cx-color mb-4">Your Schedule</h4>
+              <div class="row">
+
+              <div class="col-md-7" style="border-right: #35b9e5 1px solid !important;">
+                  <p>You have reqsted for a service from</p>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                          <img src="img/path3.jpg" alt="" class="rounded-circle  img-fluid img-cx3">
+                    </div>
+                    <div class="col-md-6 mt-5 ">
+                      <h4 class="cx-color"> Nathaniel Nat</h4>
+                    </div>
+                  </div>
+                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> At -Sakumono in the  ** Tema Metropolitan Assembly</p>
+                  <p>On Date  at time </p>
+
+                </div>
+              <div class="col-md-5 ">
+                  <h5 class="cx-color"> Desciption of Task</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
+
+
+                    </div>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-4 offset-md-1">
+                <button type="submit" class="btn btn-outline-primary" href ="#" style="cursor: pointer;">Confirm</button>
+              </div>
+              <div class="col-md-4 offset-md-1">
+                <button type="submit" class="btn btn-outline-danger" href="#" style="cursor: pointer;">Cancel</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--modal ends here  -->
 
 
     <!-- Optional JavaScript -->

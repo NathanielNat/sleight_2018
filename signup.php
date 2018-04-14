@@ -76,42 +76,40 @@
         <div class="card-cx-login">
           <div class="card-body">
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
+        <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
          <h5 class="mb-4">Create your Sleight account  </h5>
 
 
-         <form action="">
+         <form action="includes\signup.inc.php" method="POST">
              <div class="form-row">
-               <div class="form-group col-md-6">
-                <label for="inputText1">First Name</label>
-                <input type="text" class="form-control form-control-lg" id="inputText1">
+               <div class="form-group col-md-12">
+                <label for="inputText1">Full Name</label>
+                <input type="text" class="form-control form-control-lg" id="inputText1" name="name" required>
               </div>
-              <div class="form-group col-md-6">
-               <label for="inputText2">Last Name</label>
-               <input type="text" class="form-control form-control-lg" id="inputText2">
-             </div>
+
 
              <div class="form-group col-12">
                <label for="exampleInputEmail1">Email address</label>
-               <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+               <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
                </div>
 
              <div class="form-group col-12">
               <label for="inputNumber">Tel</label>
-              <input type="text" class="form-control form-control-lg" id="inputNumber" placeholder="+233">
+              <input type="text" class="form-control form-control-lg" id="inputNumber" placeholder="+233" name="tel" required>
             </div>
 
            <div class="form-group col-12 col-lg-6">
              <label for="exampleInputPassword1">Password</label>
-             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="pwd" required>
            </div>
 
            <div class="form-group col-1 col-lg-6">
              <label for="exampleInputPassword1">Confirm</label>
-             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="confirm_pwd" required>
            </div>
 
            <div class="from-group col-12 py-3 text-center">
-             <button type="submit" class="btn btn-sleight-arti">Create Account</button>
+             <button type="submit" class="btn btn-sleight-arti" name="submit">Create Account</button>
 
            </div>
            <div class="from-group col-12 text-center">

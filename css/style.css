@@ -61,8 +61,8 @@ li.nav-item {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 15rem;
-    padding-bottom: 3rem;
+    padding-top: 10rem;
+    margin-bottom: 3rem;
     color: #fff;
 }
 
@@ -209,8 +209,8 @@ margin-bottom: 4rem;
 
 .testi {
   background-color: #fcfcfc;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* SetRatingStar */
@@ -566,9 +566,18 @@ margin-bottom: 4rem;
 
 /* Confirmation page image*/
 .img-cx3 {
-    height:10rem;
+    height:11rem;
     width: 12rem;
     object-fit: cover;
     object-position: center center;
     border: 2px #dedede solid;
+}
+
+
+.error{
+  color: red;
+}
+
+.task-modal{
+  padding: 0 1rem 0 1rem;
 }

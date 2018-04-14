@@ -77,7 +77,7 @@
         <div class="card">
           <div class="card-body">
             <div class="row">
-            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right offset-md-1">
               <a href="#">
                 <img src="img/mechanic.svg" alt="mechanic" width="40" height="40" class="mb-2">
                 <h6 >Electrician</h6>
@@ -92,7 +92,7 @@
             </div>
             <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
               <a href="#">
-                <img src="img/cleaner.svg" alt="Cleaning" width="40" height="40" class="mb-2">
+                <img src="img/brickwall.svg" alt="Cleaning" width="40" height="40" class="mb-2">
                 <h6 >Mason</h6>
               </a>
             </div>
@@ -102,9 +102,9 @@
                 <h6 >Plumber</h6>
               </a>
             </div>
-            <div class="col-6 col-md-4 col-xl-2 text-center my-1 border-right ">
+            <div class="col-6 col-md-4 col-xl-2 text-center my-1 ">
               <a href="#">
-                <img src="img/gardening.svg" alt="gardening" width="40" height="40" class="mb-2">
+                <img src="img/brush.svg" alt="painting" width="40" height="40" class="mb-2">
                 <h6 >Painter</h6>
               </a>
             </div>
@@ -140,7 +140,7 @@
       <div class="col-md-4 text-center">
             <img src="img/file.svg" alt="search" width="80" height="80" class="mb-1">
           <h4 class="my-3">Find Interested Artisans</h4>
-          <p>We're available 7am-11pm and you can easily reschedule online.</p>
+          <p>We're 24/7 and you can easily reschedule online.</p>
       </div>
 
       <div class="col-md-4 text-center">
@@ -317,28 +317,21 @@
 <section class="testi">
   <div class="container">
 <div class="row">
-  <div class="col-12 col-lg-6">
-
+  <div class="col-12">
+    <div class="text-center cx-color">
+    <h5> &copy; Sleight <?php echo date("Y");?></h5>
+    </div>
   </div>
 
-  <div class="col-12 col-lg-6">
 
-  </div>
 </div>
   </div>
 </section>
-<?php
-// $object = new Dbh;
-// $object->connect();
- ?>
-<!-- testimonial  -->
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
     <script src="js/custom.js"></script>
 
   </body>

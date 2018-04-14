@@ -84,9 +84,11 @@
                   <div class="col-12">
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                    <a href="customer_account.php" class="list-group-item list-group-item-action">Account</a>
+                    <a href="user_account.php" class="list-group-item list-group-item-action">Account</a>
                       <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
+                      <a href="become_artisan.php" class="list-group-item list-group-item-action">Become an artisan</a>
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
+
                   </div>
                 </div>
 

@@ -1,7 +1,3 @@
-<?php
-  include_once 'includes/dbh.php';
-  include 'includes/users.php';
- ?>
 
 <!doctype html>
 <html lang="en">
@@ -74,23 +70,24 @@
       <div class="col-md-8 offset-md-2">
         <div class="card-cx-login">
           <div class="card-body">
+          <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
        <h5 class="mb-3"><span>Welcome Back  | <small>Login</small> </span>  </h5>
 
 
-  <form action="loginprocess.php" method="POST">
+  <form action="includes/login.inc.php" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
 
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Password" required>
     </div>
 
     <div class="from-group py-3 text-center">
-      <button type="submit" class="btn btn-sleight-arti">login</button>
+      <button type="submit" class="btn btn-sleight-arti" name="submit">login</button>
       <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
     </div>
   </form>
