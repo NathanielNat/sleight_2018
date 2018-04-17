@@ -1,7 +1,7 @@
 <?php
   // include_once 'includes/dbh.php';
   include 'includes/users.php';
-  include 'includes/connection.php'
+  include 'includes/connection.php';
  ?>
 
 <!doctype html>

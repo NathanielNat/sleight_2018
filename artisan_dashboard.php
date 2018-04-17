@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/connection.php';
-  include 'includes/users.php';
+  include 'includes/session_variables.php.php';
  ?>
 <!doctype html>
 <html lang="en">
@@ -43,12 +43,14 @@
         <a class="nav-link" href="#">How It Works</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="btn btn-sleight" href="signup.php">Signup</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?= $uname; ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="user_account.php">Account</a>
+          <a class="dropdown-item" href="logout.html">Logout</a>
+        </div>
       </li>
     </ul>
   </div>
@@ -85,7 +87,7 @@
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
                     <a href="artisan_account.php" class="list-group-item list-group-item-action">Account  </a>
-                    
+
 
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
                   </div>

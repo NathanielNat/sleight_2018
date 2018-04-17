@@ -1,5 +1,5 @@
 <?php
-  include_once 'includes/dbh.php';
+  include_once 'includes/connection.php.php';
   include 'includes/users.php';
  ?>
 
@@ -168,7 +168,7 @@
         <h1 class="display-3">Are you an Artisan</h1>
         <p class="lead">earn extra cash providing services <br> to customers</p>
         <div class="my-5">
-  <a href="become.php" class="btn btn-sleight-arti">Become an Artisan</a>
+  <a href="login.php" class="btn btn-sleight-arti">Become an Artisan</a>
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 <?php
+  include 'includes/session.php';
   include_once 'includes/connection.php';
   include 'includes/users.php';
   include 'includes/tasks.php';
+  include 'includes/session_variables.php';
  ?>
   <!doctype html>
   <html lang="en">
@@ -34,33 +36,7 @@
 
   <body>
     <!--navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
-      <div class="container">
-        <a href="index.php"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-    </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">How It Works</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="btn btn-sleight" href="signup.php">Signup</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+     <?php include 'includes/navbar.inc.php'; ?>
 
     <!-- dashboard -->
     <section class="cx-dashboard">
@@ -74,7 +50,7 @@
                 <div class="row">
                   <div class="col-12 text-center mt-4">
                     <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
-                    <h3 class="mt-4 cx-color">Charles Owusu</h3>
+                    <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
 
@@ -129,7 +105,7 @@
                         <div class="col-md-6">
                           <div class="col-md-12 ">
                             <div class="col-md-12">
-                              <h5 class="cx-color "> Charles Owusu</h5>
+                              <h5 class="cx-color "><?= $uname;?></h5>
                               <p>Artisan Caterory (Painter)</p>
 
                             </div>
@@ -152,24 +128,21 @@
                     <div class="row">
 
 
-                      <div class="col-md-6 form-group ">
-                        <label for="FirstName">First name</label><br>
-                        <input type="text" class="form-control">
-                      </div>
-                      <div class="col-md-6 form-group ">
-                        <label for="LastName">Last name</label><br>
-                        <input type="text" class="form-control">
+
+                      <div class="col-md-12 form-group ">
+                        <label for="LastName">Fullname</label><br>
+                        <input type="text" class="form-control" value="<?= $uname;?>">
                       </div>
 
 
                       <div class="form-group col-12">
                         <label for="Email">Email</label><br>
-                        <input type="email" class="form-control" placeholder="myemail@email.com">
+                        <input type="email" class="form-control"value="<?= $umail;?>" >
                       </div>
 
                       <div class="form-group col-12">
                         <label for="number">Number</label><br>
-                        <input type="text" class="form-control" placeholder="0245073066">
+                        <input type="text" class="form-control" value="<?= $utel;?>">
                       </div>
 
                     </div>

@@ -1,7 +1,9 @@
 <?php
+  include 'includes/session.php';
   include_once 'includes/connection.php';
   include 'includes/users.php';
   include 'includes/taskers.php';
+  include 'includes/session_variables.php';
 
  ?>
   <!doctype html>
@@ -47,7 +49,7 @@
 
   <body>
     <!--navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
       <div class="container">
         <a href="index.php"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,16 +61,24 @@
             <li class="nav-item active">
               <a class="nav-link" href="index.php">Home </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">User name</a>
-            </li>
 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="user_account.php">Account</a>
+                <a class="dropdown-item" href="logout.html">Logout</a>
+              </div>
+            </li>
+            </li>
 
 
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    <!-- navbar -->
+     <?php include 'includes/navbar.inc.php'; ?>
 
     <!-- dashboard -->
     <section class="cx-dashboard">
@@ -82,13 +92,13 @@
                 <div class="row">
                   <div class="col-12 text-center mt-4">
                     <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
-                    <h3 class="mt-4 cx-color">Charles Owusu</h3>
+                    <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
 
                   <div class="col-12 mt-1">
                     <div class="list-group">
-                      <a href="customer_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
+                      <a href="user_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
                     </div>
                     <hr>
                   </div>
@@ -116,7 +126,7 @@
 
               <div class="row mb-4">
                 <div class="col-12 col-md-6 col-lg-12">
-                  <h3 class="mt-5 cx-color">Create Tasks</h3>
+                  <h3 class="mt-2 cx-color">Create Tasks</h3>
                 </div>
               </div>
 

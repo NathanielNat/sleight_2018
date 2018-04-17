@@ -1,7 +1,9 @@
 <?php
+  include 'includes/session.php';
   include_once 'includes/connection.php';
   include 'includes/users.php';
   include 'includes/tasks.php';
+  include 'includes/session_variables.php';
  ?>
   <!doctype html>
   <html lang="en">
@@ -34,7 +36,7 @@
 
   <body>
     <!--navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
       <div class="container">
         <a href="index.php"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,17 +52,20 @@
               <a class="nav-link" href="#">How It Works</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-            <li class="nav-item">
-              <a class="btn btn-sleight" href="signup.php">Signup</a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="user_account.php">Account</a>
+                <a class="dropdown-item" href="logout.html">Logout</a>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+     <?php include 'includes/navbar.inc.php'; ?>
 
     <!-- dashboard -->
     <section class="cx-dashboard">
@@ -75,7 +80,7 @@
                 <div class="row">
                   <div class="col-12 text-center mt-4">
                     <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
-                    <h3 class="mt-4 cx-color">Charles Owusu</h3>
+                    <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
 
@@ -114,15 +119,13 @@
               </div>
 
 
-
+                  <form action="account.inc.php" method="POST">
                   <div class="row cx-dash-pad">
 
                     <div class="col-md-6 mb-4 ">
                       <div class="account-pane ">
                         <div class="row">
-                          <div class="col-md-6">
-                            <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
-                          </div>
+
 
                           <div class="col-md-6">
                             <div class="col-md-12">
@@ -131,21 +134,24 @@
 
 
                               </div>
-                              <form action="includes/imageloader.php" method="post" enctype="multipart/form-data">
+
                               <div class="col-md-12 mt-5">
-                                <input type="file" name="uploadfile">
-                                <button type="submit" name="uploadfilesub" class="btn-cx4 mt-5">Upload</button>
+                                <input type="file" name="profile_pic">
+
                               </div>
 
                             </div>
+                          </div>
+                          <div class="col-md-6">
+                            <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
                           </div>
 
                         </div>
 
                       </div>
 
-                </form>
-                <form>
+
+
                 <!-- Artisan information-->
                 <div class="account-pane  mt-3">
                   <div class="form-group">
@@ -155,17 +161,17 @@
 
                       <div class="col-md-12 form-group ">
                         <label for="FirstName">Full name</label><br>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="<?= $uname; ?>" name="uname">
                       </div>
 
                       <div class="form-group col-12">
                         <label for="Email">Email</label><br>
-                        <input type="email" class="form-control" placeholder="myemail@email.com">
+                        <input type="email" class="form-control" value="<?= $umail; ?>" name="umail">
                       </div>
 
                       <div class="form-group col-12">
                         <label for="number">Number</label><br>
-                        <input type="text" class="form-control" placeholder="0245073066">
+                        <input type="text" class="form-control" value="<?= $utel; ?>" name="utel">
                       </div>
 
                     </div>

@@ -1,4 +1,5 @@
 <?php
+include 'session.php';
 
 if (isset($_POST['submit'])) {
   include_once 'connection.php';
@@ -11,6 +12,8 @@ if (isset($_POST['submit'])) {
   $sql = "SELECT * from users where user_email = '$uemail' and user_password  = '$hashpass'";
   $q = $conn->query($sql);
   $qCount = $q->rowCount();
+  $q->setFetchMode(PDO::FETCH_ASSOC);
+
 
   if ($qCount < 1) {
     // checking if user is alreasy i the system.
@@ -20,7 +23,12 @@ if (isset($_POST['submit'])) {
       exit();
   }
   else {
+
+
+    while ($row = $q->fetch()){
+       $_SESSION['user_id'] = $row['id'];
       // if user is in
+    }
         header("Location: ../user_dashboard.php");
         exit();
 
