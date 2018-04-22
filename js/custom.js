@@ -20,6 +20,8 @@ $(document).ready(function() {
 
 });
 
+
+// js code to output artisan skills
 function showSkills(str){
  if (str == ""){
    document.getElementById("skillset").innerHTML ="";
@@ -30,7 +32,6 @@ function showSkills(str){
    xttp.onreadystatechange = function () {
      if (this.readyState == 4 && this.status ==200 ) {
        document.getElementById("skillset").innerHTML = this.responseText;
-
      }
    };
    xmlhttp.open("GET","taskers.php?q=" + str,true);
@@ -45,7 +46,6 @@ function showSkills(str){
     for (var i = 0; i <   zones.length; i++) {
       if (  zones[i].checked) {
         zone =   zones[i].value;
-
       }
     }
 
@@ -63,8 +63,14 @@ function showSkills(str){
         } else {
           alert(zone);
         }
-
       }
     });
+
+  }
+
+  function find_art(){
+    var find = document.getElementById('find_art');
+
+
 
   }

@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/connection.php.php';
-  include 'includes/users.php';
+  
  ?>
 
 <!doctype html>
@@ -41,7 +41,7 @@
         <a class="nav-link" href="index.php">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">How It Works</a>
+        <a class="nav-link" href="#how">How It Works</a>
       </li>
 
       <li class="nav-item">
@@ -129,7 +129,7 @@
 
 
 <!--how itw works  -->
-<section class="sleight-mag">
+<section class="sleight-mag" id="how">
 <div class="container">
   <div class="row ">
       <div class="col-12 text-center my-5">

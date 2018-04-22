@@ -1,9 +1,10 @@
 <?php
   include 'includes/session.php';
   include_once 'includes/connection.php';
-  include 'includes/users.php';
+  include 'includes/account.inc.php';
   include 'includes/tasks.php';
   include 'includes/session_variables.php';
+
  ?>
   <!doctype html>
   <html lang="en">
@@ -35,36 +36,6 @@
   </head>
 
   <body>
-    <!--navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
-      <div class="container">
-        <a href="index.php"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-    </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">How It Works</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="user_account.php">Account</a>
-                <a class="dropdown-item" href="logout.html">Logout</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
      <?php include 'includes/navbar.inc.php'; ?>
 
     <!-- dashboard -->
@@ -79,7 +50,7 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                    <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
+                    <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
@@ -97,7 +68,8 @@
                       <a href="user_account.php" class="list-group-item list-group-item-action active">Account  </a>
                       <a href="become_artisan.php" class="list-group-item list-group-item-action"> Become an Artisan</a>
                       <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
-                      <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>>
+                      <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
+
 
                     </div>
                   </div>
@@ -114,14 +86,14 @@
 
               <div class="row mb-4">
                 <div class="col-12 col-md-6 col-lg-12">
-                  <h3 class="mt-5 cx-color">Account Settings </h3>
+                  <h3 class="mt-1 cx-color">Account Settings  </h3>
                 </div>
               </div>
 
 
-                  <form action="account.inc.php" method="POST">
-                  <div class="row cx-dash-pad">
+                  <form action="includes/account.inc.php" method="POST" enctype="multipart/form-data">
 
+                  <div class="row cx-dash-pad">
                     <div class="col-md-6 mb-4 ">
                       <div class="account-pane ">
                         <div class="row">
@@ -135,30 +107,29 @@
 
                               </div>
 
-                              <div class="col-md-12 mt-5">
-                                <input type="file" name="profile_pic">
+                              <div class="col-md-12 mt-2">
+                                <!-- <input type="file" name="profile_pic"> -->
+
+                                <input id="imageupload_banner" type="file" name="pix"  class="upload">
 
                               </div>
 
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
+                            <!-- <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo"> -->
+                            <div id="preview-image_banner"></div>
                           </div>
 
                         </div>
 
                       </div>
 
-
-
                 <!-- Artisan information-->
                 <div class="account-pane  mt-3">
                   <div class="form-group">
                     <h4 class="cx-color">Personal Information</h4>
                     <div class="row">
-
-
                       <div class="col-md-12 form-group ">
                         <label for="FirstName">Full name</label><br>
                         <input type="text" class="form-control" value="<?= $uname; ?>" name="uname">
@@ -183,22 +154,25 @@
 
                 <div class="col-md-6 mb-4">
                   <div class="account-pane ">
+                    <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
                     <div class="form-group col-12">
                       <h4 class="mt-5 cx-color">Security Settings </h4>
                       <label for="currentPassword"> Current Password</label><br>
-                      <input type="password" class="form-control">
+                      <input type="password" class="form-control" name="old_pass">
                     </div>
                     <div class="form-group col-12">
                       <label for="newPasssword"> New Password</label><br>
-                      <input type="password" class="form-control">
+                      <input type="password" class="form-control" name="upass">
                     </div>
                     <div class="form-group col-12">
                       <label for="confirm_password">Confirm Password</label><br>
-                      <input type="password" class="form-control">
+                      <input type="password" class="form-control" name="confirm">
                     </div>
                   </div>
 
-                  <div class="text-center mt-5"> <a class="btn btn-cx4 " href="#">Update</a>
+                  <div class="text-center mt-5">
+                     <!-- <a class="btn btn-cx4 " href="#"></a> -->
+                    <button type="submit" class="btn btn-cx4 " name="submit"> Update</button>
                   </div>
                 </div>
 
@@ -214,15 +188,49 @@
     </section>
     <!-- dashboard -->
 
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+    $("#imageupload_banner").on('change', function () {
+
+       //Get count of selected files
+       var countFiles = $(this)[0].files.length;
+
+       var imgPath = $(this)[0].value;
+       var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+       var image_holder = $("#preview-image_banner");
+       image_holder.empty();
+
+       if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+           if (typeof (FileReader) != "undefined") {
+
+               //loop for each file selected for uploaded.
+               for (var i = 0; i < countFiles; i++) {
+
+                   var reader = new FileReader();
+                   reader.onload = function (e) {
+                       $("<img />", {
+                           "src": e.target.result,
+                               "class": "img-fluid acc_photo img-cx2 acc_photo"
+                       }).appendTo(image_holder);
+                   }
+
+                   image_holder.show();
+                   reader.readAsDataURL($(this)[0].files[i]);
+               }
+
+           } else {
+               alert("This browser does not support FileReader.");
+           }
+       } else {
+           alert("Pls select only images");
+       }
+    });
+    </script>
+
 
 
   </body>

@@ -43,7 +43,7 @@
           <div class="">
               <div class="row">
                 <div class="col-12 text-center mt-4">
-                <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
+                <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
                 <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                 <p> Artisan Category (Painter)</p>
                 </div>

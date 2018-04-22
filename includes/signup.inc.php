@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 
 
 // assign values to variables
-  $uname = $conn->quote($_POST['name']);
+  $uname = $conn->$_POST['name'];
   $uemail = $_POST['email'];
   $utel = $_POST['tel'];
   $upass =$_POST['pwd'];
@@ -28,13 +28,6 @@ elseif ($upass !== $confirm) {
   $message = "Passwords do not match.";
   echo "<span> '$message';</span>";
     header("Location: ../signup.php?error=$message");
-
-
-  //   exit();
-  // $message = "Invalid email address or password";
-  //   echo "<span> '$message';</span>";
-  // header("Location: ../login.php?error=$message");
-  //   exit();
 }
 else {
   // hash password

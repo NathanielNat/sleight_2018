@@ -1,4 +1,6 @@
 <?php
+
+include 'connection.php';
 $user_id =$_SESSION['user_id'] ;
 $sql = "SELECT * from users WHERE id = $user_id";
                $q = $conn->query($sql);
@@ -7,7 +9,7 @@ $sql = "SELECT * from users WHERE id = $user_id";
                 while ($row = $q->fetch()):
 
                     $id = $row['id'];
-                    $uname =($row['user_name']);
+                    $uname =$row['user_name'];
                     $upass = $row['user_password'];
                     $umail = $row['user_email'];
                     // $content = ($row['content']);

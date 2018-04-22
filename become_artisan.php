@@ -49,14 +49,14 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                    <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
+                    <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
 
                   <div class="col-12 mt-1">
                     <div class="list-group">
-                      <a href="artisan_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
+                      <a href="user_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
                     </div>
                     <hr>
                   </div>
@@ -88,7 +88,7 @@
                 </div>
               </div>
 
-              <form action="">
+              <form action="includes/become.inc.php" method="POST">
 
                 <div class="row cx-dash-pad">
 
@@ -96,31 +96,26 @@
 
 
                   <div class="col-md-6 mb-4 ">
-                    <div class="account-pane ">
+                    <!-- <div class="account-pane ">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="img/path2.jpg" alt="..." class=" img-fluid acc_photo img-cx2 acc_photo">
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="col-md-12 ">
+                          <div class="col-md-12">
                             <div class="col-md-12">
-                              <h5 class="cx-color "><?= $uname;?></h5>
-                              <p>Artisan Caterory (Painter)</p>
-
+                              <h5 class="cx-color "> Upload your picture</h5>
                             </div>
+
                             <div class="col-md-12 mt-5">
-                              <input type="file">
+                              <input id="imageupload_banner" type="file" name="pix"  class="upload">
                             </div>
-
                           </div>
                         </div>
-
+                        <div class="col-md-6">
+                          <div id="preview-image_banner"></div>
+                        </div>
                       </div>
+                    </div> -->
 
-                    </div>
-              </form>
-              <form>
+
                 <!-- Artisan information-->
                 <div class="account-pane  mt-3">
                   <div class="form-group">
@@ -175,16 +170,16 @@
 
                         <div class="col-md-12 form-group mt-4">
                           <label for="exp_years ">Number of Years of Experience</label><br>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" name="exp_years">
                         </div>
 
                         <div class="col-md-12 form-group ">
 
-                          <!-- <div class="dropdown show">
+                          <!-- dropdown for skille level -->
 
-                        < -->
+                        <!-- < -->
 
-                          <select class="form-control mt-3" name="experience-level" id="experience-level" >
+                          <select class="form-control mt-3" name="exp_level" id="experience_level" >
                             <option selected="selected">Select Skill level</option>
                           <option value="apprentice">Apprentice</option>
                             <option value="master">Master</option>
@@ -200,7 +195,7 @@
                               $rows = $conn->query("SELECT * FROM districts");
                               // print_r($rows);
                               foreach ($rows as $district) {
-                                echo "<option >". $district["name"] ."</option>";
+                                echo "<option>". $district["name"] ."</option>";
                               }
                                ?>
                               </select>
@@ -209,7 +204,7 @@
                         </div>
                         <div class="col-md-12 form-group">
                           <h6 class="cx-color">Give a brief description of what you do</h6>
-                          <textarea name="name" rows="4" cols="50" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140"></textarea>
+                          <textarea name="descr" rows="4" cols="50" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140"></textarea>
 
                         </div>
 
@@ -217,22 +212,13 @@
 
 
                     </div>
-                    <div class="form-group col-12">
-                      <h4 class="mt-5 cx-color">Security Settings </h4>
-                      <label for="currentPassword"> Current Password</label><br>
-                      <input type="password" class="form-control">
-                    </div>
-                    <div class="form-group col-12">
-                      <label for="newPasssword"> New Password</label><br>
-                      <input type="password" class="form-control">
-                    </div>
-                    <div class="form-group col-12">
-                      <label for="confirm_password">Confirm Password</label><br>
-                      <input type="password" class="form-control">
-                    </div>
+
                   </div>
 
-                  <div class="text-center mt-5"> <a class="btn btn-cx4 " href="#">Update</a>
+                  <div class="text-center mt-5">
+                     <!-- <a class="btn btn-cx4 " href="#"></a> -->
+                    <button type="submit" class="btn btn-cx4 " name="submit"> Update</button>
+                  </div>
                   </div>
                 </div>
 
