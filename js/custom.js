@@ -68,9 +68,4 @@ function showSkills(str){
 
   }
 
-  function find_art(){
-    var find = document.getElementById('find_art');
 
-
-
-  }

@@ -50,9 +50,20 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                    <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+                   <?php 
+                  if(empty($image)):
+                     ?>
+                    <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
+                    
+                   <?php else:
+                    
+                    ?>
+                     
+                <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+
+                  <?php endif ?>
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
-                    <p> Artisan Caterory (Painter)</p>
+                    
                   </div>
 
                   <div class="col-12 mt-1">

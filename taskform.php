@@ -1,5 +1,5 @@
 <?php
-  include 'includes/session.php';
+  // include 'includes/session.php';
   include_once 'includes/connection.php';
   include 'includes/users.php';
   include 'includes/taskers.php';
@@ -48,7 +48,7 @@
   </head>
 
   <body>
-    
+
      <?php include 'includes/navbar.inc.php'; ?>
 
     <!-- dashboard -->
@@ -62,7 +62,18 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                    <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+                    <?php 
+                  if(empty($image)):
+                     ?>
+                    <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
+                    
+                   <?php else:
+                    
+                    ?>
+                     
+                <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+
+                  <?php endif ?>
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory (Painter)</p>
                   </div>
@@ -139,7 +150,7 @@
                           <input type="text" class="form-control"  name="task_loction">
                         </div>
                         <div class="form-group col-12">
-                        <select class="form-control" name="district" id="district" onclick="loc()">
+                        <select class="form-control" name="district" id="district">
                           <option selected="selected" disabled >Select district where task is located</option>
                           <!-- Districts inserted from database here -->
 
@@ -359,6 +370,14 @@
           }
         });
 
+      }
+    </script>
+    <script >
+      function find_art(){
+
+        $.ajax({
+          url: "includes/form.inc.php";
+        }); 
       }
     </script>
 

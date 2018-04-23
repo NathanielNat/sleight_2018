@@ -43,14 +43,33 @@
           <div class="">
               <div class="row">
                 <div class="col-12 text-center mt-4">
+                  <?php 
+                  if(empty($image)):
+                     ?>
+                    <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
+                    
+                   <?php else:
+                    
+                    ?>
+                     
                 <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+
+                  <?php endif ?>
+
+
+
+
                 <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                 <p> Artisan Category (Painter)</p>
                 </div>
 
                 <div class="col-12 mt-1">
                   <div class="list-group">
-                    <a href="user_dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
+                    <a href="user_dashboard.php" class="list-group-item list-group-item-action active">Client Dashboard</a>
+                  <?php if($utype == 1): 
+                  ?>
+                  <a href="artisan_dashboard.php" class="list-group-item list-group-item-action">Artisan Dashboard</a>
+                <?php endif;?>
                   </div>
                   <hr>
                 </div>

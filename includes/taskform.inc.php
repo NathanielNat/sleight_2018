@@ -4,7 +4,7 @@ include 'session_variables.inc.php';
 include 'connection.php';
 
 if (isset($_POST[''])){
-  
+
 }
 if (isset($_POST['submit'])) {
   include 'session_variables.inc.php';
@@ -29,6 +29,8 @@ $sql->bindParam(':district',$district);
 $sql->bindParam(':task_location',$loc);
 $sql->bindParam(':decsr',$descr);
 $sql->bindParam(':due',$due_date);
+
+$sql->execute();
 
 header($string)
 

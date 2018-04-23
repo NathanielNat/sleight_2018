@@ -5,34 +5,39 @@ if (isset($_POST['submit'])) {
   include_once 'connection.php';
   include 'tasks.php';
 
-
-  $uname = $_POST['uname'];
-  $uemail = $_POST['umail'];
-  $utel = $_POST['utel'];
   $art_type = $_POST['artisan_cat'];
-  $skills = $_POST['skills_name[]'];
+  $skills = join(',',$_POST['skills_name']);
+  //$skills ="";
   $exp_years = $_POST['exp_years'];
   $exp_level = $_POST['exp_level'];
-  $district  =$_POST['district'];
+  $district  = $_POST['district'];
   $desc = $_POST['descr'];
+  $utype = 1;
+
  /* code below moves  selected image from the user user dir to the user_pics
 directory which contains all profile pictures selected by users.
  */
 
-  $sql =$conn->prepare( "UPDATE users  SET user_email=:uemal, user_name=:uname, user_tel=:utel,       exp_yrs=:exp_years, exp_level=:exp_level, skills=:skills_name[], district=:district, brief=:descr WHERE id= $user_id ");
-$msql = $conn-prepare("INSERT INTO  artisan(category,skills,district,exp_yrs,exp_level,brief,user_id)   VALUES(:artisan_cat,:skills_name[],:district,:exp_years ,:exp_level,:descr)");
 
-  $sql->bindParam(':uname', $uname);
-  $sql->bindParam(':uemail', $uemail);
-  $sql->bindParam(':utel', $utel);
-  $sql->bindParam(':artisan_cat', $art_type);
-  $sql->bindParam(':exp_years',$exp_years);
-  $sql->bindParam(':exp_level',$exp_level);
-  $sql->bindParam(':district',$district);
-  $sql->bindParam(':descr',$descr);
-  $sql->bindParam(':skills_name[]',$skills);
+$msql = $conn->prepare("UPDATE users SET category=:art_type, district=:district, skills=:skills, 
+  exp_years=:exp_yrs, exp_level=:exp_level, brief=:brief, skills=:skills, user_type=:utype WHERE id =:uid");
 
-  $sql->execute();
+  
+
+  $msql->bindParam(':art_type', $art_type);
+  $msql->bindParam(':exp_yrs',$exp_years);
+  $msql->bindParam(':exp_level',$exp_level);
+  $msql->bindParam(':district',$district);
+  $msql->bindParam(':brief',$desc);
+  $msql->bindParam(':skills',$skills);
+  $msql->bindParam(':uid',$user_id);
+  $msql->bindParam(':utype',$utype);
+
+  $msql->execute();
   header("Location: ../artisan_dashboard.php");
+  exit();
+
+
+
 }
 ?>

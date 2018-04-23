@@ -1,6 +1,7 @@
 <?php
   include_once 'includes/connection.php';
-  include 'includes/session_variables.php.php';
+  include 'includes/session.php';
+  include 'includes/session_variables.php';
  ?>
 <!doctype html>
 <html lang="en">
@@ -69,14 +70,26 @@
           <div class="">
               <div class="row">
                 <div class="col-12 text-center mt-4">
-                <img src="img/path2.jpg" alt="..." class="rounded-circle  img-fluid img-cx">
-                <h3 class="mt-4 cx-color">Charles Owusu</h3>
-                <p> Artisan Category (Painter)</p>
+                <?php 
+                  if(empty($image)):
+                     ?>
+                    <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
+                    
+                   <?php else:
+                    
+                    ?>
+                     
+                <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
+
+                  <?php endif ?>
+                <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
+                <p> Artisan Caterory <b class="cx-color"> (<?= ucfirst($cat); ?>)</b></p>
                 </div>
 
                 <div class="col-12 mt-1">
                   <div class="list-group">
-                    <a href="artisan_dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
+                    <a href="user_dashboard.php" class="list-group-item list-group-item-action">User Dashboard</a>
+                    <a href="artisan_dashboard.php" class="list-group-item list-group-item-action active">Artisan Dashboard</a>
                   </div>
                   <hr>
                 </div>
@@ -86,9 +99,9 @@
                   <div class="col-12">
                   <div class="list-group">
                     <p class="list-group-item mute"> <small> SETTINGS</small></p>
-                    <a href="artisan_account.php" class="list-group-item list-group-item-action">Account  </a>
-
-
+                    <a href="user_account.php" class="list-group-item list-group-item-action">Account</a>
+                      <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
+                       <a href="become_artisan.php" class="list-group-item list-group-item-action">Become Artisan</a>
                     <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
                   </div>
                 </div>
