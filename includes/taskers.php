@@ -20,7 +20,7 @@ include 'session_variables.php';
    <?php  foreach ($skills as  $sk):  ?>
    <?php if ($sk == $ski){ ?>
   <span>
-    <input type="checkbox" name="skills_name[]" value="<?= $row['name'];?>" checked > <?= $row['name'];?>
+    <input  type="checkbox" name="skills_name[]"  id="skills[]" value="<?= $row['name'];?>" checked > <?= $row['name'];?>
   </span>
  <?php 
   $che = false;
@@ -30,7 +30,7 @@ include 'session_variables.php';
 
    <?php if ($che == true){ ?>
    <span>
-    <input type="checkbox" name="skills_name[]" value="<?= $row['name'];?>"  > <?= $row['name'];?>
+    <input type="checkbox" name="skills_name[]" id="skills[]" value="<?= $row['name'];?>"  > <?= $row['name'];?>
   </span>
    <?php  } ?>
 
@@ -38,3 +38,5 @@ include 'session_variables.php';
   endwhile;
 }  
    ?>
+
+

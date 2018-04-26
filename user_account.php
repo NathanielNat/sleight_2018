@@ -50,20 +50,20 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                   <?php 
+                   <?php
                   if(empty($image)):
                      ?>
                     <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
-                    
+
                    <?php else:
-                    
+
                     ?>
-                     
+
                 <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
 
                   <?php endif ?>
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
-                    
+
                   </div>
 
                   <div class="col-12 mt-1">
@@ -79,7 +79,7 @@
                       <a href="user_account.php" class="list-group-item list-group-item-action active">Account  </a>
                       <a href="become_artisan.php" class="list-group-item list-group-item-action"> Become an Artisan</a>
                       <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
-                      <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
+                      <a href="includes/logout.php" class="list-group-item list-group-item-action">Logout</a>
 
 
                     </div>

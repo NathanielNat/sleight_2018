@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 
 
 // assign values to variables
-  $uname = $conn->$_POST['name'];
+  $uname = $_POST['name'];
   $uemail = $_POST['email'];
   $utel = $_POST['tel'];
   $upass =$_POST['pwd'];

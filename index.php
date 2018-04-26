@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/connection.php.php';
-  
+
  ?>
 
 <!doctype html>
@@ -140,12 +140,12 @@
       <div class="col-md-4 text-center">
             <img src="img/file.svg" alt="search" width="80" height="80" class="mb-1">
           <h4 class="my-3">Find Interested Artisans</h4>
-          <p>We're 24/7 and you can easily reschedule online.</p>
+          <p>We're 24/7. Find your artisan from a wide range of tried and tested artisan </p>
       </div>
 
       <div class="col-md-4 text-center">
             <img src="img/request.svg" alt="request" width="80" height="80" class="mb-1">
-          <h4 class="my-3">Reques Instantly</h4>
+          <h4 class="my-3">Request Instantly</h4>
           <p>We'll confirm your appointment and take care of your request electronically and securely.</p>
       </div>
 
@@ -198,7 +198,7 @@
                 </div>
 
                   <h5 class="slcl">Charles Owusu</h5>
-                  <p>Carpenter</p>
+                  <p>Mason</p>
 
                 <div class="mt-3">
                   <div class="star-rating">
@@ -219,7 +219,7 @@
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card-art">
                   <a href="#">
-              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <img class="card-img-top img-fluid img-arti" src="img/photo-1493994055174-cfa612a0d07c.jpg" alt="Card image cap">
               <div class="card-body">
                 <div class="listing-avatar">
                   <img src="img/path2.jpg" alt="">
@@ -247,14 +247,14 @@
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card-art">
                   <a href="#">
-              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <img class="card-img-top img-fluid img-arti" src="img/brushes-3129361_960_720.jpg" alt="Card image cap">
               <div class="card-body">
                 <div class="listing-avatar">
                   <img src="img/path2.jpg" alt="">
                 </div>
 
                   <h5 class="slcl">Micheal Nunoo</h5>
-                  <p>Carpenter</p>
+                  <p>Painter</p>
 
                 <div class="mt-3">
                   <div class="star-rating">
@@ -265,7 +265,7 @@
                     <span class="fa fa-star-o" data-rating="5"></span>
                     <input type="hidden" name="whatever2" class="rating-value" value="1.9">
                   </div>
-                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Tema, Lashibi</small></p>
                 </div>
               </div>
               </a>
@@ -275,14 +275,14 @@
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card-art">
                   <a href="#">
-              <img class="card-img-top img-fluid img-arti" src="img/carpenter.jpg" alt="Card image cap">
+              <img class="card-img-top img-fluid img-arti" src="img/plumbing-1340243_960_720.jpg" alt="Card image cap">
               <div class="card-body">
                 <div class="listing-avatar">
                   <img src="img/path2.jpg" alt="">
                 </div>
 
                   <h5 class="slcl">Kofi Adams</h5>
-                  <p>Carpenter</p>
+                  <p>Plumber</p>
 
                 <div class="mt-3">
                   <div class="star-rating">
@@ -293,7 +293,7 @@
                     <span class="fa fa-star-o" data-rating="5"></span>
                     <input type="hidden" name="whatever2" class="rating-value" value="1.9">
                   </div>
-                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Accra, Labone</small></p>
+                  <p> <small> <span><img src="img/map.svg" alt="search" width="20" height="20" class="mb-1"></span> Adenta,Housing Down</small></p>
                 </div>
               </div>
               </a>

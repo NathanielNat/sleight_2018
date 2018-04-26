@@ -1,4 +1,5 @@
 
+
 <?php
 require 'connection.php';
   if (isset($_POST['skills'])) {
@@ -10,7 +11,7 @@ require 'connection.php';
    echo "<h4>  Select type of task  </h4>";
   while($row = $q->fetch()):
     ?>
-  <span><input type="checkbox" name="skills_name[]" value="<?= $row['name'];?>"><?= $row['name'];?></span>
+  <span><input class="messageCheckbox" type="checkbox" name="skills_name[]" value="<?= $row['name'];?>"><?= $row['name'];?></span>
 
 <?php
   endwhile;

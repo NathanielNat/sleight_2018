@@ -22,7 +22,7 @@ $sql = "SELECT * from users WHERE id = $user_id";
                     $exp_yrs = $row['exp_years'];
                     $exp_lvl = $row['exp_level'];
                     $brief = $row['brief'];
-                    
+
                 endwhile;
 
 

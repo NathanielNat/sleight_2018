@@ -39,33 +39,6 @@ function showSkills(str){
  }
 }
 
-// task_dis = skillset
-  function loc() {
-    var   zones = document.getElementsByName('district');
-    var zone;
-    for (var i = 0; i <   zones.length; i++) {
-      if (  zones[i].checked) {
-        zone =   zones[i].value;
-      }
-    }
-
-    $.ajax({
-
-      url: "includes/taskers.php",
-      method: "POST",
-      data: {
-      zone: zone
-      },
-      dataType: "text",
-      success: function(data) {
-        if (data != '') {
-          document.getElementById("skillset").innerHTML = data; //response;
-        } else {
-          alert(zone);
-        }
-      }
-    });
-
-  }
-
-
+$('.modal_button').click(function(){
+  console.log('modal clicked')
+})

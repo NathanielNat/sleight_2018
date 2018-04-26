@@ -27,37 +27,7 @@
 
   </head>
   <body>
-
-   <nav class="navbar navbar-expand-lg navbar-light sleight-headbg fixed-top">
-    <div class="container">
- <a href="index.html"><img src="img/sleight.png" class="img-fluid navbar-brand" width="104" height="68"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">How It Works</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <?= $uname; ?>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="user_account.php">Account</a>
-          <a class="dropdown-item" href="logout.html">Logout</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
-
+<?php include 'includes/navbar.inc.php'; ?>
 
 <!-- dashboard -->
 <section class="cx-dashboard">
@@ -70,15 +40,15 @@
           <div class="">
               <div class="row">
                 <div class="col-12 text-center mt-4">
-                <?php 
+                <?php
                   if(empty($image)):
                      ?>
                     <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
-                    
+
                    <?php else:
-                    
+
                     ?>
-                     
+
                 <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
 
                   <?php endif ?>
@@ -102,7 +72,7 @@
                     <a href="user_account.php" class="list-group-item list-group-item-action">Account</a>
                       <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
                        <a href="become_artisan.php" class="list-group-item list-group-item-action">Become Artisan</a>
-                    <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
+                    <a href="includes/logout.php" class="list-group-item list-group-item-action">Logout</a>
                   </div>
                 </div>
 

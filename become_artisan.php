@@ -49,19 +49,19 @@
               <div class="">
                 <div class="row">
                   <div class="col-12 text-center mt-4">
-                    <?php 
+                    <?php
                   if(empty($image)):
                      ?>
                     <img src="user_pics/default.png" alt="..." class="rounded-circle  img-fluid img-cx">
-                    
+
                    <?php else:
-                    
+
                     ?>
-                     
+
                 <img src="<?= $image;?>" alt="..." class="rounded-circle  img-fluid img-cx">
 
                   <?php endif ?>
-                    <h3 class="mt-4 cx-color"><?= $uname; ?></h3> 
+                    <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
                     <p> Artisan Caterory <b class="cx-color"> (<?= ucfirst($cat); ?>)</b></p>
                   </div>
 
@@ -78,7 +78,7 @@
                       <a href="user_account.php" class="list-group-item list-group-item-action">Account  </a>
                       <a href="become_artisan.php" class="list-group-item list-group-item-action active"> Become an Artisan</a>
                       <a href="taskform.php" class="list-group-item list-group-item-action">Create Task</a>
-                      <a href="logout.html" class="list-group-item list-group-item-action">Logout</a>
+                      <a href="includes/logout.php" class="list-group-item list-group-item-action">Logout</a>
 
                     </div>
                   </div>
@@ -133,7 +133,7 @@
                     <h4 class="cx-color">Work Information</h4>
                     <div class="form-group col-12">
                       <h5>     Select artisan type</h5>
-                     
+
                       <label class="radio-inline rad">  <input type = "radio" name="artisan_cat" value="mason" onclick="myfunction()" class="form-control " required <?php if($cat == 'mason'){ echo "checked";}?> > Mason </label>
                       <label class="radio-inline rad"><input type="radio" name="artisan_cat" value="carpenter" onclick="myfunction()" class=" form-control " required <?php if($cat == 'carpenter'){ echo "checked";}?>>Carpenter</label>
                       <label class="radio-inline rad"><input type ="radio" name="artisan_cat" value="painter" onclick="myfunction()" class=" form-control " required <?php if($cat == 'painter'){ echo "checked";}?>>Painter</label>
@@ -173,7 +173,7 @@
 
                               $rows = $conn->query("SELECT * FROM districts");
                               // print_r($rows);
-                              foreach ($rows as $district): 
+                              foreach ($rows as $district):
                                 $loc = $district["name"];
                                 ?>
                                 <option <?php if($dist == $loc){ echo "selected";}?> value="<?= $district["name"];?>" ><?= $district["name"];?> </option>;

@@ -20,7 +20,7 @@
      </a>
      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
        <a class="dropdown-item" href="user_account.php">Account</a>
-       <a class="dropdown-item" href="logout.html">Logout</a>
+       <a class="dropdown-item" href="includes/logout.php">Logout</a>
      </div>
    </li>
  </ul>
