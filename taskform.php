@@ -116,7 +116,7 @@
               </div>
 
 <!-- Task form-->
-              
+
 
                 <div class="row cx-dash-pad">
                   <div class="col-md-5 mb-4 ">
@@ -174,7 +174,7 @@
                                         <h3>Select Time</h3>
                         <span>
                             <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control" name="due">
-                        
+
                         <script>
                             $(function () {
                                 $('#datetimepicker').datetimepicker();
@@ -190,7 +190,7 @@
                 <div class="text-center mt-2">
                      <div  class="btn btn-cx4" onclick="find_art()">Find Artisan</div>
                 </div>
-                 
+
                 </div>
 
                 <div class="col-md-7 mb-4" id="artisan">
@@ -304,13 +304,8 @@
         }
 
 
-        // alert(category);
-        // alert(district);
-        // alert(due_date);
-        // alert(loc);
-        // alert(brief);
 
-      
+
         // Ajax request to pull available artisans from database
         $.ajax({
           url: "suggestions.php",
@@ -324,9 +319,6 @@
               district :district,
               due : due
 
-              // due_date: due_date,
-              // loc:loc,
-              // brief:brief
           },
           dataType: "text",
           success: function(data) {

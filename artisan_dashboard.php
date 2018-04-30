@@ -2,6 +2,13 @@
   include_once 'includes/connection.php';
   include 'includes/session.php';
   include 'includes/session_variables.php';
+
+  include_once 'includes/filldashboard.inc.php';
+
+    $tsk_total = art_assign($user_id);
+    $tsk_comp = art_comp($user_id);
+
+
  ?>
 <!doctype html>
 <html lang="en">
@@ -99,8 +106,8 @@
             <div class="col-12 col-md-6 col-lg-4 mb-3">
               <div class="card-cx-dash">
                 <div class="card-body">
-                  <h3 class="card-title text-right ">12</h3>
-                  <p class="card-text text-right">Total Task Completed</p>
+                  <h3 class="card-title text-right "><?= $tsk_total;?></h3>
+                  <p class="card-text text-right">Total Task Assigned</p>
                 </div>
               </div>
              </div>
@@ -108,8 +115,8 @@
              <div class="col-12 col-md-6 col-lg-4 mb-3">
                <div class="card-cx-dash2">
                  <div class="card-body">
-                   <h3 class="card-title text-right"> 12</h3>
-                   <p class="card-text text-right">Total Task Assigned</p>
+                   <h3 class="card-title text-right"><?= $tsk_comp;?></h3>
+                   <p class="card-text text-right">Total Task Completed</p>
                  </div>
                </div>
               </div>
@@ -129,93 +136,20 @@
             <div class="tab-content plrtd " id="pills-tabContent">
               <!-- Taks Completed-->
               <div class="tab-pane fade show active table-responsive " id="tasks-completed" role="tabpanel" aria-labelledby="pills-home-tab">
-                <table class="table  table-striped">
+              <table class="table  table-striped">
                 <thead>
                   <tr>
-                    <th scope="col-2">Task #</th>
                     <th scope="col-2">Date of Assignment</th>
                     <th scope="col-2">Client</th>
                     <th scope="col-2">location</th>
-                    <th scope="col-2">GHC</th>
-                    <th scope="col-1">Status</th>
-                    <th scope="col-1">Action</th>
+                    <th scope="col-2">Status</th>
+                    <th scope="col-2">Rating</th>
+
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Litecoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
 
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Ethereum</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Ethereum</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                </tbody>
+              <?php    include 'includes/art_dashboard.inc.php'; ?>
+
               </table>
               </div>
                   <!--Task Completed -->
@@ -236,88 +170,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">0025</th>
-                    <td>25/08/2018</td>
-                    <td>Bitcoin</td>
-                    <td>100</td>
-                    <td>446.99</td>
-                    <td>Completed</td>
-                    <td>Sent</td>
-                  </tr>
-                </tbody>
-              </table>
+
               </div> -->
 
 
