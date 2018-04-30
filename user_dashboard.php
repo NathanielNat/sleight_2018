@@ -97,10 +97,22 @@
       <div class="col-lg-9">
         <div class="cont-area">
 
+              <?php if(isset($_GET['success'])): ?>
+    <div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong><?= $_GET['success'];?></strong> 
+</div>
+ 
+          <?php endif; ?>
+
           <div class="row mb-4">
             <div class="col-md-6 mb-4">
               <h3 class="mt-5 cx-color">Client's  Dashboard</h3>
             </div>
+          <?php  $date_crt = date('Y-m-d');
+ // $scheduled = date_time_set($date_crt, 00, 00, 00);
+ echo $da;
+ ?>
 
           </div>
 
@@ -155,7 +167,9 @@
                     <th scope="row">0025</th>
                     <td>25/08/2018</td>
                     <td>Bitcoin fdkjnfvlkfndl</td>
-                    <td>Completed</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                      Status
+                      </button></td>
                     <td>Sent</td>
                   </tr>
                   <tr>
@@ -223,6 +237,56 @@
       </div>
       </div>
       <!-- contant area-->
+
+      <!-- Modal to check tasks completed and rate artisan -->
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Comfirm Completion of Task</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+        <div class="row ">
+          <div class="col-6">
+            Confirm Completion
+            <span class="switch">
+              <input type="checkbox" name="tsk_finish" class="switch">
+              <label for="switch-id">Completed</label>
+            </span>
+          </div>
+          <div class="col-6">
+        <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="whatever2" class="rating-value" value="1.9">
+                  </div>
+                </div>
+
+                  </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+ 
+      <!-- End of modal -->
     </div>
   </div>
 </section>

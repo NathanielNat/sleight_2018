@@ -1,56 +1,36 @@
 <?php
-include 'session.php';
-include 'session_variables.inc.php';
-include 'connection.php';
+require 'session.php';
+require 'session_variables.php';
+require 'connection.php';
 
-if (isset($_POST['find'])){
+    /// submit form info into database
+if (isset($_POST['submit'])) {
+ 
+ $art_id = $_POST['artisan_id'];
+ $loc = $_POST['task_loction'];
+ $descr = $_POST['descr'];
+ $tsk_dist = $_POST['district'];
+ $created_on =date('Y-m-d');
+ $date_crt = $_POST['due'];
+ // $scheduled = date_time_set($date_crt, 00, 00, 00);
+ $cust_id = $_SESSION['user_id'];
+ $completed= 0;
+  
 
+  $sqln = $conn->prepare("INSERT INTO task (location, district, description,created_at, scheduled_date,completed,customer_id,artisan_id) VALUES (:loc,:tsk_dist,:descr,:created_on,:date_crt,:completed,:cust_id,:art_id)");
 
-  $art_type = $_POST['artisan_cat'];
-  $skills = join(',',$_POST['skills_name']);
-  $district  =$_POST['district'];
-  $loc = $_POST['task_loction'];
-  $descr = $_POST['descr'];
-  $due_date = $_POST['due'];
-  $artisan_id = $_POST['artisan_id'];
-  $customer_id =$_POST['user_id'];
+ $sqln->bindParam(':loc',$loc);
+ $sqln->bindParam(':descr',$descr);
+ $sqln->bindParam(':tsk_dist',$tsk_dist);
+ $sqln->bindParam(':created_on',$created_on);
+ $sqln->bindParam(':date_crt', $date_crt);
+ $sqln->bindParam(':cust_id',$cust_id);
+ $sqln->bindParam(':art_id',$art_id);
+ $sqln->bindParam(':completed',$completed);
 
-
-
-$sql->prepare("SELECT * FROM users WHERE category  =:artisan_cat");
-
-
-
+ $sqln->execute();
+header("Location: ../user_dashboard.php");
+//exit();
 
 }
-// if (isset($_POST['submit'])) {
-//
-//
-//   $art_type = $_POST['artisan_cat'];
-//   $skills = $_POST['skills_name[]';
-//   $district  =$_POST['district'];
-//   $loc = $_POST['task_loction'];
-//   $descr = $_POST['descr'];
-//   $due_date = $_POST['due'];
-//   $artisan_id = $_POST['artisan_id'];
-//   $customer_id =$_POST['user_id'];
-//
-//
-// $sql = $conn->prepare("INSERT INTO tasks(created_at, scheduled_date,location,artisan_cat,task_cat,district,description, customer_id,artisan_id)
-// VALUES ()");
-//
-$sql->bindParam(':artisan_cat',$art_type);
-$sql->bindParam(':skills_name',$skills);
-$sql->bindParam(':district',$district);
-$sql->bindParam(':task_location',$loc);
-$sql->bindParam(':decsr',$descr);
-$sql->bindParam(':due',$due_date);
-
-$sql->execute();
-//
-// header($string)
-//
-// }
-
-
- ?>
+    ?>

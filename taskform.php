@@ -78,7 +78,7 @@
 
                   <?php endif ?>
                     <h3 class="mt-4 cx-color"><?= $uname; ?></h3>
-                    <p> Artisan Caterory (Painter)</p>
+                    <p> Artisan Caterory <b class="cx-color"> (<?= ucfirst($cat); ?>)</b></p>
                   </div>
 
                   <div class="col-12 mt-1">
@@ -116,7 +116,7 @@
               </div>
 
 <!-- Task form-->
-              <form action="taskform.php" method="GET">
+              
 
                 <div class="row cx-dash-pad">
                   <div class="col-md-5 mb-4 ">
@@ -145,7 +145,7 @@
 
                         <div class="form-group col-12">
                           <br>
-                          <textarea name="descr" rows="4" cols="50" id="descr" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140"></textarea>
+                          <textarea name="descr" rows="4" cols="50" id="descr" class=" form-control" placeholder="Brief Descrition Of Task" maxlength="140" ></textarea>
                         </div>
                             <!-- Task form  -->
                         <div class="form-group col-12">
@@ -174,12 +174,12 @@
                                         <h3>Select Time</h3>
                         <span>
                             <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control" name="due">
-                        </span>
+                        
                         <script>
                             $(function () {
                                 $('#datetimepicker').datetimepicker();
                             });
-                        </script> </div>
+                        </script> </span></div>
 
 
                           </div>
@@ -190,7 +190,7 @@
                 <div class="text-center mt-2">
                      <div  class="btn btn-cx4" onclick="find_art()">Find Artisan</div>
                 </div>
-                  </form>
+                 
                 </div>
 
                 <div class="col-md-7 mb-4" id="artisan">
@@ -275,6 +275,10 @@
         //var skill_set = document.getElementsByName('artisan_cat');
 
         var skill_set = document.getElementsByName('artisan_cat');
+    var taskloction = document.getElementById('task_loction').value;
+    var  descr = document.getElementById('descr').value;
+    var district = document.getElementById('district').value;
+    var due = document.getElementById('datetimepicker').value;
         var category;
         for (var i = 0; i < skill_set.length; i++) {
           if (skill_set[i].checked) {
@@ -284,9 +288,9 @@
         }
         var e = document.getElementById("district");
         var district = e.options[e.selectedIndex].value;
-        var loc = document.getElementById('task_loction').value;
-        var due_date = document.getElementById('datetimepicker').value;
-        var brief = document.getElementById('descr').value;
+        // var loc = document.getElementById('task_loction').value;
+        // var due_date = document.getElementById('datetimepicker').value;
+        // var brief = document.getElementById('descr').value;
 
 
         var skills = [];
@@ -300,13 +304,13 @@
         }
 
 
-        alert(category);
-        alert(district);
-        alert(due_date);
-        alert(loc);
-        alert(brief);
+        // alert(category);
+        // alert(district);
+        // alert(due_date);
+        // alert(loc);
+        // alert(brief);
 
-
+      
         // Ajax request to pull available artisans from database
         $.ajax({
           url: "suggestions.php",
@@ -315,9 +319,14 @@
             category: category,
              district: district,
               skills: skills,
-              due_date: due_date,
-              loc:loc,
-              brief:brief
+              taskloction:taskloction,
+              descr :descr,
+              district :district,
+              due : due
+
+              // due_date: due_date,
+              // loc:loc,
+              // brief:brief
           },
           dataType: "text",
           success: function(data) {
@@ -327,10 +336,10 @@
           document.getElementById("artisan").innerHTML = array_data[0]; //response to the div block col-md-7;
           document.getElementById("modal_t").innerHTML = array_data[1]; //response to fetch modal ;
             //document.getElementById("artisan").innerHTML = data; //response
-            document.getElementById('dist').innerHTML = brief;
-            document.getElementById('loc').innerHTML = loc;
-            document.getElementById('tsk_dist').innerHTML = district;
-            document.getElementById('due').innerHTML = due_date;
+            // document.getElementById('description').innerHTML = brief;
+            // document.getElementById('loc').innerHTML = loc;
+            // document.getElementById('tsk_dist').innerHTML = district;
+            // document.getElementById('due').innerHTML = due_date;
               alert(data);
             } else {
               alert(data);

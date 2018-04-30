@@ -39,6 +39,6 @@ function showSkills(str){
  }
 }
 
-$('.modal_button').click(function(){
-  console.log('modal clicked')
-})
+function alert1(){
+  alert("Login successful");
+}

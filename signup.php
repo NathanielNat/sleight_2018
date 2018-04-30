@@ -25,6 +25,12 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- google fonts used -->
 
+    <!-- Js files -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+              <script src="js/bootsrap.min.js"></script>
+              <script src="js/custom.js"></script>
+
+
 
   </head>
   <body>
@@ -70,6 +76,9 @@
       <div class="col-md-8 offset-md-2">
         <div class="card-cx-login">
           <div class="card-body">
+
+  
+</div>
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
         <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
          <h5 class="mb-4">Create your Sleight account  </h5>
@@ -104,7 +113,7 @@
            </div>
 
            <div class="from-group col-12 py-3 text-center">
-             <button type="submit" class="btn btn-sleight-arti" name="submit">Create Account</button>
+             <button type="submit" class="btn btn-sleight-arti" name="submit" onclick="alert1()">Create Account</button>
 
            </div>
            <div class="from-group col-12 text-center">
@@ -126,4 +135,5 @@
 
 <!--Form design -->
 </body>
+
 </html>

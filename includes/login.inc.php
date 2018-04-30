@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     // checking if user is alreasy i the system.
     $message = "Invalid email address or password";
       echo "<span> '$message';</span>";
+
     header("Location: ../login.php?error=$message");
       exit();
   }
@@ -29,7 +30,9 @@ if (isset($_POST['submit'])) {
        $_SESSION['user_id'] = $row['id'];
       // if user is in
     }
-        header("Location: ../user_dashboard.php");
+      $message = "Login successful";
+      echo "<span> '$message';</span>";
+        header("Location: ../user_dashboard.php?success=$message");
         exit();
 
   }

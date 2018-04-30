@@ -1,5 +1,5 @@
 
-<!doctype html>
+<!doctype html>]
 <html lang="en">
   <head>
     <title>Sleight | Login </title>
@@ -21,6 +21,14 @@
     <!-- google fonts used -->
 
 
+<!-- scripts -->
+
+<script src="js/jquery.js" type="text/javascript"></script>
+
+ <script src="js/bootsrap.min.js"></script>
+
+
+
   </head>
   <body>
 
@@ -38,6 +46,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home </a>
       </li>
+
+      <script>
+        // toastr.info('Are you the 6 fingered man?');
+      </script>
 
       <li class="nav-item">
         <a class="btn btn-sleight" href="signup.php">Signup</a>
@@ -63,7 +75,24 @@
       <div class="col-md-8 offset-md-2">
         <div class="card-cx-login">
           <div class="card-body">
-          <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
+          <span class="error"> 
+           <?php if(isset($_GET['error'])): ?>
+    <div class="alert alert-danger alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong><?= $_GET['error'];?></strong> 
+</div>
+ 
+          <?php endif; ?>
+          
+              <?php if(isset($_GET['success'])): ?>
+    <div class="alert alert-danger alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong><?= $_GET['success'];?></strong> 
+</div>
+ 
+          <?php endif; ?>
+            </span>
+          
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
        <h5 class="mb-3"><span>Welcome Back  | <small>Login</small> </span>  </h5>
 
@@ -81,21 +110,33 @@
 
     <div class="from-group py-3 text-center">
       <button type="submit" class="btn btn-sleight-arti" name="submit">login</button>
+      
       <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
     </div>
   </form>
+  
 
   <div class=" text-center my-5">
     <p>New to Sleight? <a href="signup.php">Sign up</a></p>
   </div>
   </div>
   </div>
+  <button  class="btn btn-sleight-arti" id="btn"> try button</button>
 </div>
 </div>
 </div>
 </div>
+
 </section>
+
 
 <!--Form design -->
 </body>
+
+<!-- <script>
+  ('#btn').click(function(){
+      swal("I am here");
+      swal("Here's the title!", "...and here's the text!");
+  });
+</script> -->
 </html>
