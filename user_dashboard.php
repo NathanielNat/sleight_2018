@@ -115,11 +115,6 @@
               <h3 class="mt-5 cx-color">Client's  Dashboard</h3>
             </div>
 
-          <?php  $date_crt = date('Y-m-d');
-
- echo $da;
- ?>
-
           </div>
 
 
@@ -171,6 +166,7 @@
                   </thead>
                 <?php
                 include 'includes/dashboard.inc.php'; ?>
+
               </table>
 
 
@@ -200,6 +196,20 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+
+$(document).ready(function () {
+  $('.star-rating')
+  .on('click', function(e) {
+    var rating = $(e.target).data('rating');
+    //setRating(rating);
+    document.getElementById('rate').value = rating;
+    // alert(rating);
+  });
+});
+</script>
+
 
 </body>
 </html>

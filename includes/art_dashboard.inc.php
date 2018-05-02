@@ -20,6 +20,7 @@ $p->setFetchMode(PDO::FETCH_ASSOC);
      $tsk_id = $tsk['id'];
      $tsk_comp = $tsk['completed'];
      $tsk_loc = $tsk['location'];
+     $tsk_rate = $tsk['rate'];
      ?>
    <tr>
      <td><?= $tsk['created_at']; ?></td>
@@ -32,7 +33,14 @@ $p->setFetchMode(PDO::FETCH_ASSOC);
        <b> Completed</b>
      <?php  endif;?></td>
 
-     <td>Rating</td>
+     <td>
+       <?php if ($tsk_comp  == 0  ): ?>
+         <p>Rating</p>
+         <?php else:  ?>
+
+       <?= $tsk_rate;?>
+     <?php  endif;?>
+   </td>
 
    </tr>
  </tbody>

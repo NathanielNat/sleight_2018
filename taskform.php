@@ -4,6 +4,7 @@
   include 'includes/taskers.php';
   include 'includes/session_variables.php';
 
+    confirm_session();
  ?>
 
 
@@ -173,7 +174,7 @@
                           <div>
                                         <h3>Select Time</h3>
                         <span>
-                            <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control" name="due">
+                            <input id="datetimepicker" type="text" placeholder="Click to select date and time" class="form-control" name="due" required>
 
                         <script>
                             $(function () {

@@ -220,7 +220,7 @@ margin-bottom: 4rem;
   font-size:1em;
 }
 
-.star-rating .fa-star{color:  #35b9e5;}
+.star-rating .fa-star .star-rating-hover .star-rating-active{color:  #35b9e5;}
 
 /* SetRatingStar */
 
@@ -582,3 +582,7 @@ margin-bottom: 4rem;
 .task-modal{
   padding: 0 1rem 0 1rem;
 }
+/* Rating system*/
+
+
+/* Rating system*/

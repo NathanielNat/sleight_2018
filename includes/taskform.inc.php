@@ -5,7 +5,7 @@ require 'connection.php';
 
     /// submit form info into database
 if (isset($_POST['submit'])) {
- 
+
  $art_id = $_POST['artisan_id'];
  $loc = $_POST['task_loction'];
  $descr = $_POST['descr'];
@@ -14,8 +14,12 @@ if (isset($_POST['submit'])) {
  $date_crt = $_POST['due'];
  // $scheduled = date_time_set($date_crt, 00, 00, 00);
  $cust_id = $_SESSION['user_id'];
+ $d=strtotime($date_crt);
  $completed= 0;
-  
+
+ //$d=strtotime("10:30pm April 15 2014");
+ // echo "Created date is " . date("Y-m-d h:i:sa", $d);
+
 
   $sqln = $conn->prepare("INSERT INTO task (location, district, description,created_at, scheduled_date,completed,customer_id,artisan_id) VALUES (:loc,:tsk_dist,:descr,:created_on,:date_crt,:completed,:cust_id,:art_id)");
 
@@ -23,7 +27,7 @@ if (isset($_POST['submit'])) {
  $sqln->bindParam(':descr',$descr);
  $sqln->bindParam(':tsk_dist',$tsk_dist);
  $sqln->bindParam(':created_on',$created_on);
- $sqln->bindParam(':date_crt', $date_crt);
+ $sqln->bindParam(':date_crt', $d);
  $sqln->bindParam(':cust_id',$cust_id);
  $sqln->bindParam(':art_id',$art_id);
  $sqln->bindParam(':completed',$completed);

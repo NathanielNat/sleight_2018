@@ -19,6 +19,7 @@ include 'connection.php';
       $art_name = filldash($art_id);
       $tsk_id = $tsk['id'];
       $tsk_comp = $tsk['completed'];
+      $tsk_rate = $tsk['rate'];
       ?>
     <tr>
       <td><?= $tsk['scheduled_date']; ?></td>
@@ -32,7 +33,14 @@ include 'connection.php';
         <b> Completed</b>
       <?php  endif;?></td>
 
-      <td>Rating</td>
+      <td>
+        <?php if ($tsk_comp  == 0  ): ?>
+          <p>Rating</p>
+          <?php else:  ?>
+
+        <?= $tsk_rate;?>
+      <?php  endif;?>
+    </td>
 
     </tr>
   </tbody>
@@ -66,14 +74,22 @@ include 'connection.php';
               </span>
             </div>
             <div class="col-6">
-          <div class="star-rating" >
-                      <span class="fa fa-star-o" data-rating="1"></span>
-                      <span class="fa fa-star-o" data-rating="2"></span>
-                      <span class="fa fa-star-o" data-rating="3"></span>
-                      <span class="fa fa-star-o" data-rating="4"></span>
-                      <span class="fa fa-star-o" data-rating="5"></span>
-                      <input type="hidden" name="whatever2" class="rating-value" id="rate">
-                    </div>
+              <div class="container">
+                <div class="rate">
+                  <div class="star-rating">
+                    <span class="fa fa-star-o fa-2x" data-rating="1" id="stars"></span>
+                    <span class="fa fa-star-o fa-2x" data-rating="2" id="stars"></span>
+                    <span class="fa fa-star-o fa-2x" data-rating="3" id="stars"></span>
+                    <span class="fa fa-star-o fa-2x" data-rating="4" id="stars"></span>
+                    <span class="fa fa-star-o fa-2x" data-rating="5" id="stars"></span>
+                    <input type="hidden" name="rate" class="rating-value" id="rate">
+                  </div>
+
+                </div>
+
+              </div>
+
+
                   </div>
 
                     </div>
@@ -88,6 +104,7 @@ include 'connection.php';
       </div>
     </div>
   </div>
+
 
         <!-- End of modal -->
 <?php endwhile ; ?>

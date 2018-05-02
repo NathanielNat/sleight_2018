@@ -1,5 +1,6 @@
 <?php
 require 'includes/connection.php';
+include 'includes/filldashboard.inc.php';
 
 
  if (isset($_POST['category'])) {
@@ -18,7 +19,7 @@ $dist = $_POST['district'];
 
 //$sqlm = "SELECT * FROM users WHERE user_type = 1 AND category  = '$art_cat' AND skills IN ('$job_type') AND district = '$dist' ";
 
- $sqlm = "SELECT * FROM users WHERE user_type = 1 AND category  = '$art_cat' ";
+ $sqlm = "SELECT * FROM users WHERE user_type = 1 AND category  = '$art_cat'  AND district = '$dist' ";
  $z = $conn->query($sqlm);
  $zCount = $z->rowCount();
  $z->setFetchMode(PDO::FETCH_ASSOC);
@@ -55,9 +56,13 @@ $dist = $_POST['district'];
           </div>
         </div>
         <div class="col-md-6">
+          <?php
+            $u_id = $art['id'];
+          $comp = art_comp($u_id);
+          $avg_rt = avg_rate($u_id); ?>
           <div class="col-md-12">
-            <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
-            <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
+            <p> <i class="glyphicon glyphicon-briefcase"></i> <b><?= $comp;?></b>-- Number of tasks completed </p>
+            <p> <i class="glyphicon glyphicon-star mb-0"></i> <b><?=   $avg_rt;?></b>-- Average Rating </p>
             <p class="cx-color mb-1">How Can I help</p>
             <p>
               <?= $art['brief']; ?>
@@ -114,8 +119,8 @@ $dist = $_POST['district'];
              <input type="hidden" name="descr" value=" <?= $descr ;?>">
              <input type="hidden" name="district" value=" <?= $district; ?>">
              <input type="hidden" name="due" value="<? $due; ?>">
-             
-                 
+
+
 
                   <div class="col-md-6 mt-5 ">
                     <h4 class="cx-color"> <?= $art['user_name'];?></h4>
@@ -124,12 +129,12 @@ $dist = $_POST['district'];
                 </div>
                 <br/>
                 <p><i class="fa fa-map-marker" aria-hidden="true"></i>  I work mainly in the -  <strong><?= $art['district'];?> </strong> and other surrounding districts
-                  
+
 
               </div>
               <div class="col-md-5 ">
                 <h5 class="cx-color"> About Your Artisan</h5>
-                <p name="brief"  class="mb-2"> <?= $art['brief'];?></p>  
+                <p name="brief"  class="mb-2"> <?= $art['brief'];?></p>
 
                  <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
             <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
@@ -159,7 +164,7 @@ $dist = $_POST['district'];
 
     <?php endwhile ?>
 
-  
+
     <?php endif?>
 
     <?php
