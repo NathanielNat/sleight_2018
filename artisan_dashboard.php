@@ -93,6 +93,14 @@
       <div class="col-lg-9">
         <div class="cont-area">
 
+
+          <?php if(isset($_GET['success'])): ?>
+          <div class="alert alert-success alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong><?= $_GET['success'];?></strong>
+          </div>
+
+          <?php endif; ?>
           <div class="row mb-4">
             <div class="col-md-6 mb-4">
               <h3 class="mt-5 cx-color">Dashboard</h3>
@@ -186,5 +194,11 @@
   </div>
 </section>
 <!-- dashboard -->
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/custom.js"></script>
+
 </body>
 </html>

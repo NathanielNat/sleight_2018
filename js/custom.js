@@ -36,7 +36,3 @@ function showSkills(str){
    xmlhttp.send();
  }
 }
-
-function alert1(){
-  alert("Login successful");
-}

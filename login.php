@@ -75,26 +75,26 @@
       <div class="col-md-8 offset-md-2">
         <div class="card-cx-login">
           <div class="card-body">
-          <span class="error"> 
+          <span class="error">
            <?php if(isset($_GET['error'])): ?>
     <div class="alert alert-danger alert-dismissible">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong><?= $_GET['error'];?></strong> 
+  <strong><?= $_GET['error'];?></strong>
 </div>
- 
+
           <?php endif; ?>
-          
+
               <?php if(isset($_GET['success'])): ?>
-    <div class="alert alert-danger alert-dismissible">
+    <div class="alert alert-primary alert-dismissible">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong><?= $_GET['success'];?></strong> 
+  <strong><?= $_GET['success'];?></strong>
 </div>
- 
+
           <?php endif; ?>
             </span>
-          
+
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
-       <h5 class="mb-3"><span>Welcome Back  | <small>Login</small> </span>  </h5>
+       <h5 class="mb-3"><span><i class="fa fa-user"></i>  Welcome  | <small>Login</small> </span>  </h5>
 
 
   <form action="includes/login.inc.php" method="POST">
@@ -110,18 +110,18 @@
 
     <div class="from-group py-3 text-center">
       <button type="submit" class="btn btn-sleight-arti" name="submit">login</button>
-      
+
       <p  class="text-center pt-3"><small><a href="#">Forgot Your Password?</a> </small></p>
     </div>
   </form>
-  
+
 
   <div class=" text-center my-5">
     <p>New to Sleight? <a href="signup.php">Sign up</a></p>
   </div>
   </div>
   </div>
-  <button  class="btn btn-sleight-arti" id="btn"> try button</button>
+
 </div>
 </div>
 </div>

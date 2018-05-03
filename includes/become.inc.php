@@ -19,10 +19,10 @@ directory which contains all profile pictures selected by users.
  */
 
 
-$msql = $conn->prepare("UPDATE users SET category=:art_type, district=:district, skills=:skills, 
+$msql = $conn->prepare("UPDATE users SET category=:art_type, district=:district, skills=:skills,
   exp_years=:exp_yrs, exp_level=:exp_level, brief=:brief, skills=:skills, user_type=:utype WHERE id =:uid");
 
-  
+
 
   $msql->bindParam(':art_type', $art_type);
   $msql->bindParam(':exp_yrs',$exp_years);
@@ -34,7 +34,10 @@ $msql = $conn->prepare("UPDATE users SET category=:art_type, district=:district,
   $msql->bindParam(':utype',$utype);
 
   $msql->execute();
-  header("Location: ../artisan_dashboard.php");
+  $message = "Update successful. You can now recieve job requests!!!";
+  echo "<span> '$message';</span>";
+    header("Location: ../artisan_dashboard.php?success=$message");
+  // header("Location: ../artisan_dashboard.php");
   exit();
 
 

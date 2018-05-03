@@ -77,7 +77,7 @@
         <div class="card-cx-login">
           <div class="card-body">
 
-  
+
 </div>
      <a href="index.php"><img src="img/sleightcol.png" class="img-fluid navbar-brand" width="150" height="68"></a>
         <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
@@ -86,7 +86,7 @@
 
          <form action="includes\signup.inc.php" method="POST">
              <div class="form-row">
-               <div class="form-group col-md-12">
+               <div class="form-group col-md-12 snp">
                 <label for="inputText1">Full Name</label>
                 <input type="text" class="form-control form-control-lg" id="inputText1" name="name" required>
               </div>
@@ -113,7 +113,7 @@
            </div>
 
            <div class="from-group col-12 py-3 text-center">
-             <button type="submit" class="btn btn-sleight-arti" name="submit" onclick="alert1()">Create Account</button>
+             <button type="submit" class="btn btn-sleight-arti" name="submit">Create Account</button>
 
            </div>
            <div class="from-group col-12 text-center">

@@ -22,7 +22,7 @@ directory which contains all profile pictures selected by users.
 
     // code to compare new passwords.
 if ($old_pass =='' && $upass =='' && $confirm =='') {
-       
+
        }
        else{
 
@@ -33,7 +33,7 @@ if ($old_pass =='' && $upass =='' && $confirm =='') {
     $q->setFetchMode(PDO::FETCH_ASSOC);
 
      while ($row = $q->fetch()):
-      
+
        if ( $row['user_password']!== $hash_old) {
        $message = "Passwords do not match";
        echo "<span> '$message';</span>";
@@ -46,25 +46,25 @@ if ($old_pass =='' && $upass =='' && $confirm =='') {
         header("Location: ../user_account.php?error=$message");
         exit();
     }
-    
+
   endwhile;
 }
-   
+
    if((move_uploaded_file($t_name2,$dir."/".$u_dir)) && $upass ){
-  
+
   $sql =$conn->prepare( "UPDATE users  SET user_email=:uemail, user_name=:uname, user_tel=:utel, profile_pic=:image,user_password=:upass
     WHERE id= :user_id");
- } 
+ }
   elseif(move_uploaded_file($t_name2,$dir."/".$u_dir)) {
-  
+
   $sql =$conn->prepare( "UPDATE users  SET user_email=:uemail, user_name=:uname, user_tel=:utel, profile_pic=:image
     WHERE id= :user_id");
- } 
+ }
  elseif ($old_pass !='' && $upass !='' && $confirm !='') {
    $sql =$conn->prepare( "UPDATE users  SET user_email=:uemail, user_name=:uname, user_tel=:utel, user_password=:upass
     WHERE id= :user_id");
  }
- 
+
  else{
 
      $sql =$conn->prepare( "UPDATE users  SET user_email=:uemail, user_name=:uname, user_tel=:utel
@@ -81,8 +81,12 @@ if ($old_pass =='' && $upass =='' && $confirm =='') {
 if ($old_pass !='' && $upass !='' && $confirm !='') {
  $sql->bindParam(':upass',md5($upass));
 }
+
   $sql->execute();
-  header("Location: ../user_account.php");
+  $message = "Update successful";
+  echo "<span> '$message';</span>";
+    header("Location: ../user_dashboard.php?success=$message");
+  // header("Location: ../user_account.php");
   exit();
 }
 
