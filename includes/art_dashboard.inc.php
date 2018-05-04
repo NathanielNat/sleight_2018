@@ -27,7 +27,12 @@ $p->setFetchMode(PDO::FETCH_ASSOC);
      <td><?= $cust_name;?></td>
      <td> <?= $tsk_loc;?></td>
      <td id="tsk_comp" > <?php if ($tsk_comp  == 0  ): ?>
-       <b> Uncompleted</b>
+       <form action="includes/email.php" method="POST">
+
+
+         <button type="submit" name="submit" class="btn btn-primary">
+           Cancel
+           </button>
 
        <?php else:  ?>
        <b> Completed</b>

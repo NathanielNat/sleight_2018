@@ -4,7 +4,7 @@
   include 'includes/taskers.php';
   include 'includes/session_variables.php';
 
-    confirm_session();
+
  ?>
 
 
@@ -279,7 +279,7 @@
     var taskloction = document.getElementById('task_loction').value;
     var  descr = document.getElementById('descr').value;
     var district = document.getElementById('district').value;
-    var due = document.getElementById('datetimepicker').value;
+    var ddate = document.getElementById('datetimepicker').value;
         var category;
         for (var i = 0; i < skill_set.length; i++) {
           if (skill_set[i].checked) {
@@ -318,7 +318,7 @@
               taskloction:taskloction,
               descr :descr,
               district :district,
-              due : due
+            ddate : ddate
 
           },
           dataType: "text",
@@ -333,9 +333,9 @@
             // document.getElementById('loc').innerHTML = loc;
             // document.getElementById('tsk_dist').innerHTML = district;
             // document.getElementById('due').innerHTML = due_date;
-              alert(data);
+              // alert(ddate);
             } else {
-              alert(data);
+              // alert(data);
             }
 
 

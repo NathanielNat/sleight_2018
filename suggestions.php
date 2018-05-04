@@ -8,7 +8,7 @@ include 'includes/filldashboard.inc.php';
  $task_loction = $_POST['taskloction'];
  $descr = $_POST['descr'];
  $district = $_POST['district'];
- $due = $_POST['due'];
+ $due = $_POST['ddate'];
 
 if(isset($_POST['skills'])){
 	$job_type = $_POST['skills'];
@@ -118,7 +118,7 @@ $dist = $_POST['district'];
              <input type="hidden" name="task_loction" value=" <?= $task_loction; ?>">
              <input type="hidden" name="descr" value=" <?= $descr ;?>">
              <input type="hidden" name="district" value=" <?= $district; ?>">
-             <input type="hidden" name="due" value="<? $due; ?>">
+             <input type="hidden" name="ddate" value="<?= $due; ?>">
 
 
 
@@ -136,8 +136,8 @@ $dist = $_POST['district'];
                 <h5 class="cx-color"> About Your Artisan</h5>
                 <p name="brief"  class="mb-2"> <?= $art['brief'];?></p>
 
-                 <p> <i class="glyphicon glyphicon-briefcase"></i> <b>89</b>-- Number of tasks completed </p>
-            <p> <i class="glyphicon glyphicon-star mb-0"></i> <b>4.5</b>-- Average Rating </p>
+                 <p> <i class="glyphicon glyphicon-briefcase"></i> <b><?= $comp;?></b>-- Number of tasks completed </p>
+            <p> <i class="glyphicon glyphicon-star mb-0"></i> <b><?=   $avg_rt;?></b>-- Average Rating </p>
               </div>
             </div>
             <div class="col-md-12">

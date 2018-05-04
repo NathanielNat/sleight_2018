@@ -1,56 +1,8 @@
 <?php
-require 'session.php';
-require 'session_variables.php';
-require 'connection.php';
+
+
 include 'filldashboard.inc.php';
-
-    /// submit form info into database
 if (isset($_POST['submit'])) {
-
- $art_id = $_POST['artisan_id'];
- $loc = $_POST['task_loction'];
- $descr = $_POST['descr'];
- $tsk_dist = $_POST['district'];
- $created_on =date('Y-m-d');
- $date_crt = $_POST['ddate'];
- // $scheduled = date_time_set($date_crt, 00, 00, 00);
- $cust_id = $_SESSION['user_id'];
-
-
- // strftime('%y-%m-%d %I:%M' [, $timestamp]);
-
-  $dd = str_replace("/", "-", $date_crt);
-
- $completed= 0;
-
-
- $cust_name = artdash($cust_id);
- $art_name  = filldash($art_id);
-
- //$d=strtotime("10:30pm April 15 2014");
- // echo "Created date is " . date("Y-m-d h:i:sa", $d);
-
-
-  $sqln = $conn->prepare("INSERT INTO task (location, district, description,created_at, scheduled_date,completed,customer_id,artisan_id) VALUES (:loc,:tsk_dist,:descr,:created_on,:date_crt,:completed,:cust_id,:art_id)");
-
-
-
-
-
- $sqln->bindParam(':loc',$loc);
- $sqln->bindParam(':descr',$descr);
- $sqln->bindParam(':tsk_dist',$tsk_dist);
- $sqln->bindParam(':created_on',$created_on);
- $sqln->bindParam(':date_crt',  $dd);
- $sqln->bindParam(':cust_id',$cust_id);
- $sqln->bindParam(':art_id',$art_id);
- $sqln->bindParam(':completed',$completed);
-
- $sqln->execute();
-
-header("Location: ../user_dashboard.php");
-
-
 require '../PHPMailerAutoload.php';
 
 
@@ -162,24 +114,10 @@ $mail->Body    = "
         <div class='email-details'>
             <img src='../img/path2.jpg'  class='user-img'>
             <div class='info'>
-                <p class='lead'>Hello $art_name,  your services ar being requird by  $cust_name. Read the detials below.</p>
+                <p class='lead'>Sorry $cust_name, your job request to  $art_name has been cancelled. Try anothrer artisan.</p>
                 <hr>
 
-                <h4>Details</h4>
-                <ul>
-                    <li>
-                        <p>Date and Time</p>
-                        <p class='content'>$date_crt</p>
-                    </li>
-                    <li>
-                        <p>Description</p>
-                        <p class='content'>$descr</p>
-                    </li>
-                    <li>
-                        <p>Location</p>
-                        <p class='content'>$loc</p>
-                    </li>
-                </ul
+
 </body>
 </html>";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -192,8 +130,8 @@ if(!$mail->send()) {
 }
 
 
-
+header("Location: ../artisan_dashboard.php");
 exit();
 
 }
-    ?>
+?>
