@@ -197,7 +197,7 @@
                   <img src="img/path2.jpg" alt="">
                 </div>
 
-                  <h5 class="slcl">Charles Owusu</h5>
+                  <h5 class="slcl">Charles Kofi</h5>
                   <p>Mason</p>
 
                 <div class="mt-3">
@@ -253,7 +253,7 @@
                   <img src="img/path2.jpg" alt="">
                 </div>
 
-                  <h5 class="slcl">Micheal Nunoo</h5>
+                  <h5 class="slcl">Micheal Mensah</h5>
                   <p>Painter</p>
 
                 <div class="mt-3">

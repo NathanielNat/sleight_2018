@@ -192,10 +192,10 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
 
 <script>
 
@@ -203,10 +203,13 @@ $(document).ready(function () {
   $('.star-rating')
   .on('click', function(e) {
     var rating = $(e.target).data('rating');
-    //setRating(rating);
+    // setRating(rating);
     document.getElementById('rate').value = rating;
     // alert(rating);
+
   });
+
+
 });
 </script>
 

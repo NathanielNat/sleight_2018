@@ -63,11 +63,11 @@ include 'connection.php';
           <input type="hidden" name="tsk_id" value="<?= $tsk_id; ?>">
 
         <div class="modal-body">
-          Modal body..
+
           <div class="row">
             <div class="col-6">
               Confirm Completion
-              <?= $tsk_id?>
+
               <span class="switch">
                 <input type="checkbox" name="tsk_finish" class="switch" id="comp" value="1" required>
                 <label for="switch-id">Completed</label>
@@ -75,9 +75,9 @@ include 'connection.php';
             </div>
             <div class="col-6">
               <div class="container">
-                <div class="rate">
+                <!-- <div class="rate"> -->
                   <div class="star-rating">
-                    <span class="fa fa-star-o fa-2x" data-rating="1" id="stars"></span>
+                    <span class="fa fa-star-o fa-2x " data-rating="1" id="stars"></span>
                     <span class="fa fa-star-o fa-2x" data-rating="2" id="stars"></span>
                     <span class="fa fa-star-o fa-2x" data-rating="3" id="stars"></span>
                     <span class="fa fa-star-o fa-2x" data-rating="4" id="stars"></span>
@@ -85,7 +85,7 @@ include 'connection.php';
                     <input type="hidden" name="rate" class="rating-value" id="rate">
                   </div>
 
-                </div>
+                <!-- </div> -->
 
               </div>
 

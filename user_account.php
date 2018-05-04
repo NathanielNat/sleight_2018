@@ -68,7 +68,7 @@
 
                   <div class="col-12 mt-1">
                     <div class="list-group">
-                      <a href="user_dashboard.php" class="list-group-item list-group-item-action ">Dashboard</a>
+                      <a href="user_dashboard.php" class="list-group-item list-group-item-action">Dashboard</a>
                     </div>
                     <hr>
                   </div>
@@ -167,7 +167,7 @@
                   <div class="account-pane ">
                     <span class="error">  <?php if(isset($_GET['error'])){ echo $_GET['error']; }?></span>
                     <div class="form-group col-12">
-                      <
+                    
                       <h4 class="mt-5 cx-color">Security Settings </h4>
                       <label for="currentPassword"> Current Password</label><br>
                       <input type="password" class="form-control" name="old_pass">
