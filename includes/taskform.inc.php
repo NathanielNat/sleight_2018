@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
  $tsk_dist = $_POST['district'];
  $created_on =date('Y-m-d');
  $date_crt = $_POST['ddate'];
+ //$scheduled = strftime();
  // $scheduled = date_time_set($date_crt, 00, 00, 00);
  $cust_id = $_SESSION['user_id'];
 
@@ -158,11 +159,12 @@ $mail->Body    = "
 <body>
 
 <div class='container'>
-        <img src='../img/sleightcol.png'  class='img-resize'>
+        <img src='http://localhost/projects/sleight_2018/img/sleightcol.png'  class='img-resize'>
+          <img src='http://localhost/projects/sleight_2018/img/carpenter.jpg'  class='img-resize'>
         <div class='email-details'>
             <img src='../img/path2.jpg'  class='user-img'>
             <div class='info'>
-                <p class='lead'>Hello $art_name,  your services ar being requird by  $cust_name. Read the detials below.</p>
+                <p class='lead'>Hello $art_name,  your services are being requird by  $cust_name. Read the detials below.</p>
                 <hr>
 
                 <h4>Details</h4>
@@ -182,6 +184,7 @@ $mail->Body    = "
                 </ul
 </body>
 </html>";
+//$mail->addAttachment("../img/sleightcol.png");
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {

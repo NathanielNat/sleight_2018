@@ -28,10 +28,12 @@ $p->setFetchMode(PDO::FETCH_ASSOC);
      <td> <?= $tsk_loc;?></td>
      <td id="tsk_comp" > <?php if ($tsk_comp  == 0  ): ?>
        <form action="includes/email.php" method="POST">
-
+         <input type="hidden" name="cust_id" value="<?= $cust_id ; ?>">
+          <input type="hidden" name="tsk_id" value="<?= $tsk_id ; ?>">
 
          <button type="submit" name="submit" class="btn btn-primary">
            Cancel
+
            </button>
 
        <?php else:  ?>

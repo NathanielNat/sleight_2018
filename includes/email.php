@@ -1,14 +1,24 @@
 <?php
 
-
+require 'session.php';
+require 'connection.php';
+require 'session_variables.php';
 include 'filldashboard.inc.php';
+
+
 if (isset($_POST['submit'])) {
 require '../PHPMailerAutoload.php';
+
+$custo_id  = $_POST['cust_id'];
+$art_id = $_SESSION['user_id'];
+$tsk_id = $_POST['tsk_id'];
+$cust_name = artdash($custo_id);
+$art_name  = filldash($art_id);
 
 
 $mail = new PHPMailer;
 
-$mail->SMTPDebug = 4;                               // Enable verbose debug outputx
+$mail->SMTPDebug = 0;                               // Enable verbose debug outputx
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';
@@ -110,13 +120,13 @@ $mail->Body    = "
 <body>
 
 <div class='container'>
-        <img src='../img/sleightcol.png'  class='img-resize'>
+
         <div class='email-details'>
-            <img src='../img/path2.jpg'  class='user-img'>
+
             <div class='info'>
                 <p class='lead'>Sorry $cust_name, your job request to  $art_name has been cancelled. Try anothrer artisan.</p>
-                <hr>
-
+              </div>
+              </div>
 
 </body>
 </html>";
@@ -126,11 +136,13 @@ if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    // echo 'Message has been sent';
+    $sq = $conn->query("DELETE FROM task where id = $tsk_id");
+    header("location:../artisan_dashboard.php");
 }
 
 
-header("Location: ../artisan_dashboard.php");
+
 exit();
 
 }
